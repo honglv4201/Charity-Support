@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yanone+Kaffeesatz&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yanone+Kaffeesatz&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yanone+Kaffeesatz&display=swap");
+.header__wrapper {
+  width: 1200px;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo img {
+  width: 60px;
+  padding: 8px;
+  border-radius: 10px;
+}
+.header__logo span {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-left: 10px;
+  text-transform: uppercase;
+  color: #ff70a6;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.header__navbar ul li {
+  display: inline-block;
+  padding: 0 18px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: var(--text-color-brown-dart);
+  /* font-family: "Yanone Kaffeesatz", sans-serif; */
+}
+.header__navbar li.active {
+  font-weight: 600;
+  color: var(--main-color);
+}
+.header__navbar li:hover {
+  color: var(--main-color);
+}
+.header__account {
+  flex: 1;
+  justify-content: right;
+}
+
+.header__user {
+}
+.header__user .avatar img {
+  width: 44px;
+}
+
+.header__notify {
+  background-color: var(--third-bg-light);
+  padding: 6px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-content: center;
+  position: relative;
+  margin-right: 20px;
+}
+.header__notify i {
+  font-size: 1.6rem;
+  color: var(--main-color);
+}
+.header__notify .notify-badge {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--main-color-green);
+  border-radius: 50%;
+  top: 4px;
+  right: 5px;
+}
+
+.header__user .avatar img {
+  border-radius: 50%;
+}
+.header__user .avatar {
+  margin-right: 12px;
+}
+.header__user .username {
+  font-size: 1.6rem;
+  font-weight: 550;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.header__user .toggle-down i {
+  color: var(--text-color-brown);
+  margin-left: 12px;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
