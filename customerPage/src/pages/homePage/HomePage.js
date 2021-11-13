@@ -9,6 +9,10 @@ import collectImg from "../../assets/img/collect.png";
 import post1Img from "../../assets/img/homePagePost/post1.jpg";
 import post2Img from "../../assets/img/homePagePost/post2.jpg";
 import post3Img from "../../assets/img/homePagePost/post3.jpg";
+import { ItemHomePage } from "../../components/donateItemHomePage/ItemHomePage";
+
+// json
+import { featuredPost } from "../../assets/JsonData/featuredPost";
 /**
  * @author
  * @function HomePage
@@ -148,97 +152,37 @@ export const HomePage = (props) => {
         </div>
 
         <div className="list-donate-items">
-          <div className="donate-item">
-            <div className="image">
-              <img src={post2Img} alt="" />
-            </div>
-            <div className="title">
-              Góp máy thở cho bệnh viện chống dịch tại thành phố
-            </div>
-            <div className="desc">
-              Hỗ trợ bệnh nhân tại các bệnh viện tại thành phố Hồ Chí Minh
-            </div>
-            <div className="below-desc">
-              <div className="status-bar item1">
-                <span></span>
-              </div>
-              <div className="status danger">Còn 3 ngày</div>
-            </div>
-            <div className="donate-info">
-              <div className="target">
-                <div className="target__txt">Mục tiêu</div>
-                <div className="target__detail">
-                  <span> 7.5 Triệu Đồng </span>/ 10 Triệu Đồng
-                </div>
-              </div>
+          {featuredPost.map((item, ind) => (
+            <ItemHomePage {...item} />
+          ))}
+        </div>
+      </div>
+      {/* end : page 2 */}
 
-              <div className="btn-donate">
-                <button className="zoom-anim">Ủng hộ</button>
-              </div>
-            </div>
+      {/* page 3 */}
+      <div className="homepage session2">
+        <div className="session2-header">
+          <div className="title">
+            <span>Các dự án </span>
+            <span> Ủng hộ chống dịch Covid-19</span>
           </div>
-
-          <div className="donate-item">
-            <div className="image">
-              <img src={post3Img} alt="" />
+          <div className="nav-item">
+            <div className="nav-btn prev">
+              <i class="fas fa-chevron-left"></i>
             </div>
-            <div className="title">
-              Tặng xe cho anh chàng khuyết tật nhà nghèo
-            </div>
-            <div className="desc">
-              Hỗ trợ bệnh nhân tại các bệnh viện tại thành phố Hồ Chí Minh
-            </div>
-            <div className="below-desc">
-              <div className="status-bar item2">
-                <span></span>
-              </div>
-              <div className="status">Còn 11 ngày</div>
-            </div>
-            <div className="donate-info">
-              <div className="target">
-                <div className="target__txt">Mục tiêu</div>
-                <div className="target__detail">
-                  <span> 11.5 Triệu Đồng </span>/ 22 Triệu Đồng
-                </div>
-              </div>
-
-              <div className="btn-donate">
-                <button className="zoom-anim">Ủng hộ</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="donate-item">
-            <div className="image">
-              <img src={post2Img} alt="" />
-            </div>
-            <div className="title">
-              Góp máy thở cho bệnh viện chống dịch tại thành phố
-            </div>
-            <div className="desc">
-              Hỗ trợ bệnh nhân tại các bệnh viện tại thành phố Hồ Chí Minh
-            </div>
-            <div className="below-desc">
-              <div className="status-bar item1">
-                <span></span>
-              </div>
-              <div className="status danger">Còn 3 ngày</div>
-            </div>
-            <div className="donate-info">
-              <div className="target">
-                <div className="target__txt">Mục tiêu</div>
-                <div className="target__detail">
-                  <span> 7.5 Triệu Đồng </span>/ 10 Triệu Đồng
-                </div>
-              </div>
-
-              <div className="btn-donate">
-                <button className="zoom-anim">Ủng hộ</button>
-              </div>
+            <div className="nav-btn next">
+              <i class="fas fa-angle-right"></i>
             </div>
           </div>
         </div>
+
+        <div className="list-donate-items">
+          {featuredPost.map((item, ind) => (
+            <ItemHomePage {...item} />
+          ))}
+        </div>
       </div>
+      {/* end : page 3 */}
     </div>
   );
 };

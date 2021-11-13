@@ -292,7 +292,7 @@
 /* PAGE 2 */
 
 .homepage.session2 {
-  padding: 10px 140px;
+  padding: 10px 100px 0 140px;
   padding-bottom: 30px;
   margin-bottom: 30px;
   background-color: var(--third-bg);
@@ -313,8 +313,9 @@
 .homepage.session2 .nav-item .nav-btn {
   box-shadow: var(--box-shadow);
   padding: 10px 16px;
-  margin-left: 15px;
+  margin-left: 5px;
   border-radius: 5px;
+  margin-right: 15px;
 }
 .homepage.session2 .nav-item .nav-btn:hover {
   cursor: pointer;
@@ -357,7 +358,7 @@
 }
 .list-donate-items .desc {
   margin: 15px 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--text-color);
   letter-spacing: 0.5px;
 }
@@ -443,11 +444,11 @@
 }
 
 .donate-item .donate-info .target__detail {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 12px;
 }
 .target__detail span {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   opacity: 0.8;
   color: var(--main-color-green);
