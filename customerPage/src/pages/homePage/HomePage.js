@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Header } from "../../components/header/Header";
 import "./homepage.css";
 import homeImg from "../../assets/img/home1.png";
@@ -19,9 +20,12 @@ import { featuredPost } from "../../assets/JsonData/featuredPost";
  **/
 
 export const HomePage = (props) => {
+  const handleDonateBtn = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div>
-      <Header />
+      <Header link="home" />
 
       {/* Start : HomePage Top */}
       <div className="home__top">
@@ -126,8 +130,16 @@ export const HomePage = (props) => {
                 <br />
                 Hi vọng sẽ nhận được tình yêu thương từ quý vị
               </p>
-              <button className="btn btn-donate zoom-anim">Ủng hộ</button>
-              <button className="btn btn-detail zoom-anim">Chi tiết</button>
+              <Link
+                to="/donate"
+                onClick={handleDonateBtn}
+                className="btn btn-donate zoom-anim"
+              >
+                Ủng hộ
+              </Link>
+              <Link to="/detail" className="btn btn-detail zoom-anim">
+                Chi tiết
+              </Link>
             </div>
           </div>
         </div>
