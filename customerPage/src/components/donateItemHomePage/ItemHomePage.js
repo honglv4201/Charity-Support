@@ -9,6 +9,7 @@ export const ItemHomePage = ({ ...props }) => {
   return (
     <div className="donate-item">
       <div className="image">
+        <div className="time-remaining">{props.time}</div>
         <img src={props.image} alt="" />
       </div>
       <div className="title">{props.title}</div>
@@ -17,7 +18,7 @@ export const ItemHomePage = ({ ...props }) => {
         <div className="status-bar item2">
           <span></span>
         </div>
-        <div className="status">{props.time}</div>
+        {/* <div className="status">{props.time}</div> */}
       </div>
       <div className="donate-info">
         <div className="target">

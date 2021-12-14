@@ -2,16 +2,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yanone+Kaffeesatz&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yanone+Kaffeesatz&display=swap");
 .header__wrapper {
-  width: 1200px;
-  margin: 15px auto;
+  width: calc(100vw - 10px);
+  margin: 0 auto;
+  padding: 5px 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: relative;
+  position: fixed;
+  z-index: 100;
+  background-color: var(--white-color);
+  top: 0;
+  left: 0;
+  padding-left: 100px;
+  padding-right: 100px;
+  right: 0;
+  transition: all 0.7s linear;
+}
+
+.header__wrapper::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid rgba(202, 202, 202, 0.205);
+  width: calc(100vw - 150px);
+  bottom: -5px;
 }
 
 .header__logo {
   display: flex;
   align-items: center;
+  transition: all 0.2s;
+  padding: 5px;
+}
+.header__logo.hide {
+  display: none;
 }
 .header__logo img {
   width: 60px;
@@ -23,39 +47,81 @@
   font-weight: 600;
   margin-left: 10px;
   text-transform: uppercase;
-  color: #ff70a6;
+  /* color: #ff70a6; */
+  color: var(--third-color-green);
   font-family: "Yanone Kaffeesatz", sans-serif;
 }
-
+.header__logo:hover {
+  transform: scale(1.1);
+}
+.header__navbar.hide {
+  display: none;
+}
+.header__navbar .title {
+  font-size: 1.9rem;
+  color: var(--third-color-green);
+  margin-left: 70px;
+  margin-top: 11px;
+  text-transform: uppercase;
+  padding: 5px;
+}
 .header__navbar ul li {
   display: inline-block;
   padding: 0 18px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-transform: capitalize;
   letter-spacing: 1px;
   cursor: pointer;
-  color: var(--text-color-brown-dart);
+  /* color: var(--text-color-brown-dart); */
+  color: var(--text-color);
+  font-weight: 500;
+  opacity: 1;
   /* font-family: "Yanone Kaffeesatz", sans-serif; */
+  padding: 16px 16px;
+  border-radius: 5px;
+}
+.header__navbar ul li a {
+  padding: 10px;
 }
 .header__navbar li.active {
   font-weight: 600;
   color: var(--main-color);
+  opacity: 1;
 }
 .header__navbar li:hover {
   color: var(--main-color);
+  background-color: rgb(238, 238, 238);
+  padding: 10px 16px;
 }
-.header__account {
+.header__account,
+.header__account-login {
+  justify-content: flex-end;
   flex: 1;
-  justify-content: right;
+}
+.header__account.hide {
+  display: none !important;
 }
 
 .header__user {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+.header__user:hover {
+  cursor: pointer;
+  background-color: rgb(243, 243, 243);
+}
+.header__user .avatar {
+  display: grid;
+  place-content: center;
 }
 .header__user .avatar img {
   width: 44px;
 }
 
-.header__notify {
+.header__notify,
+.header__question {
   background-color: var(--third-bg-light);
   padding: 6px;
   border-radius: 50%;
@@ -65,8 +131,16 @@
   place-content: center;
   position: relative;
   margin-right: 20px;
+  cursor: pointer;
+  animation: all 0.5s;
 }
-.header__notify i {
+.header__notify:hover,
+.header__question:hover {
+  background-color: rgb(235, 235, 235);
+  padding: 20px;
+}
+.header__notify i,
+.header__question i {
   font-size: 1.6rem;
   color: var(--main-color);
 }
@@ -98,5 +172,27 @@
   margin-left: 12px;
   font-size: 1.6rem;
   margin-bottom: 6px;
+  cursor: pointer;
+}
+
+/* LOGIN SIGN UP  */
+
+.header__wrapper .btn-auth {
+  display: inline-block;
+  overflow: hidden;
+  padding: 12px 26px;
+  background-color: rgb(245, 245, 245);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  margin: 0 10px;
+  border-radius: 6px;
+  color: var(--third-color-green);
+}
+.header__wrapper .btn-auth.signup {
+  background-color: var(--third-color-green);
+  color: white;
+}
+.header__wrapper .btn-auth:hover {
   cursor: pointer;
 }

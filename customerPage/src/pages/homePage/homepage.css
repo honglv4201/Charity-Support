@@ -1,5 +1,6 @@
 .home__top {
   width: 95vw;
+  margin-top: 70px;
 }
 .home__top .image {
   width: 600px;
@@ -24,14 +25,14 @@
 .home__top-leftpannel .btn-donate {
   background-image: linear-gradient(
     to top right,
-    var(--main-color-green),
-    var(--second-color-green)
+    var(--third-color-green),
+    var(--third-color-green)
   );
   padding: 14px 30px;
   width: fit-content;
-  border-radius: var(--border-radius-big);
+  border-radius: var(--border-radius);
   color: var(--text-white);
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   align-items: center;
 }
@@ -222,11 +223,12 @@
   height: 170px;
   background-color: #000;
   z-index: -1;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to top,
     var(--main-color-pink),
     var(--second-color-pink)
-  );
+  ); */
+  background-image: linear-gradient(to top, #90dcff, #b3e5fc);
   border-radius: var(--border-radius-small);
   opacity: 0.3;
 }
@@ -241,8 +243,8 @@
   z-index: -1;
   background-image: linear-gradient(
     to top,
-    var(--main-color-green),
-    var(--second-color-green)
+    var(--third-color-green),
+    var(--third-color-green)
   );
   border-radius: var(--border-radius-small);
   opacity: 0.67;
@@ -274,19 +276,21 @@
   line-height: 1.6;
 }
 .new-update .post-right > .btn {
-  padding: 10px 30px;
+  padding: 14px 36px;
   font-size: 1.6rem;
   margin-top: 20px;
-  background-color: var(--second-color-green);
+  background-color: var(--third-color-green);
   color: var(--text-white);
   border-radius: 8px;
   float: right;
   margin-left: 15px;
+  font-weight: 600;
 }
 .new-update .post-right > .btn-detail {
   background-color: var(--white-bg);
-  color: var(--main-color-green);
-  border: 1px solid var(--main-color-green);
+  color: var(--third-color-green);
+  font-weight: 600;
+  border: 2px solid var(--third-color-green);
 }
 
 /* PAGE 2 */
@@ -345,16 +349,46 @@
 .list-donate-items .donate-item:hover {
   box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.15);
 }
+.list-donate-items .image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 0px;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+.list-donate-items .image .time-remaining {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: var(--third-color-green);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 .list-donate-items .image img {
   width: 100%;
   margin-bottom: 20px;
   border-radius: 3px;
+  transform: scale(1);
+  transition: transform linear 0.3s;
+}
+.list-donate-items .image img:hover {
+  object-fit: cover;
+  transform: scale(1.03);
 }
 
 .list-donate-items .title {
   font-size: 1.8rem;
+  padding: 10px;
   line-height: 1.6;
   font-weight: 600;
+  background-color: rgb(247, 255, 250);
+  color: var(--text-color);
 }
 .list-donate-items .desc {
   margin: 15px 0;
@@ -367,13 +401,15 @@
   align-items: center;
 }
 .donate-item .status-bar {
-  width: 70%;
-  height: 10px;
+  width: 100%;
+  height: 12px;
   background-color: #f0f0f0;
   border-radius: 10px;
   position: relative;
   margin-bottom: 15px;
   margin-top: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .donate-item .status-bar span {
   position: absolute;
@@ -381,7 +417,7 @@
   width: 80%;
   height: 100%;
   border-radius: 10px;
-  background-color: var(--second-color-green);
+  background-color: rgb(105, 203, 216);
 }
 .donate-item .status-bar span:after {
   display: none;
@@ -455,12 +491,12 @@
 }
 
 .donate-info .btn-donate button {
-  padding: 10px 30px;
-  border-radius: var(--border-radius);
+  padding: 12px 40px;
+  border-radius: var(--border-radius-small);
   background-image: linear-gradient(
     to top right,
-    var(--main-color-green),
-    var(--second-color-green)
+    var(--third-color-green-dart),
+    var(--third-color-green-dart)
   );
   color: var(--text-white);
   box-shadow: var(--box-shadow);
