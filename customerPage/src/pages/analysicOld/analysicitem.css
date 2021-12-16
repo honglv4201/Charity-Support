@@ -177,9 +177,6 @@
   color: var(--white);
   border-radius: 6px;
 }
-.analysic-item-page .btn:hover {
-  opacity: 0.7;
-}
 .analysic-item-page .details table {
   width: 100%;
   border-collapse: collapse;
@@ -235,33 +232,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
     transform: scale(1);
+    padding-left: 20px;
   }
 }
 
-/* table */
-.details .recentOrders table.statement tr td:nth-child(2) {
-  width: 230px;
-  margin: 0 auto;
-  text-align: start;
-  padding-left: 30px;
-}
-.details .recentOrders table.statement tr td {
-  padding: 30px !important;
-}
-.details .recentOrders table.statement tr td:nth-child(3) {
-  width: 140px;
-  text-align: end;
-}
-.details .recentOrders table.statement tr td:nth-child(4) {
-  text-align: end;
-}
-.details .recentOrders table.statement tr td:nth-child(5) {
-  text-align: center !important;
-  width: 160px;
-}
-.details .recentOrders table.statement tr td:last-child {
-  width: 160px;
-}
 .details .recentOrders table tr td:last-child {
   text-align: end;
 }
@@ -317,9 +291,6 @@
   background: var(--white);
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
-}
-.recentCustomers .chart1 {
-  height: 400px;
 }
 .recentCustomers.statement {
   margin-top: -30px;
@@ -617,12 +588,6 @@
 }
 .analysic-item-page .statement__header .month-year {
   display: none;
-}
-.analysic-item-page .statement__header .month-year.active {
-  display: flex;
-}
-.analysic-item-page .statement__header .honghong.year {
-  margin-left: 20px;
 }
 .honghong {
   width: 200px;

@@ -24,24 +24,17 @@ import {
   useFilters,
 } from "react-table";
 import donateUserJson from "../../assets/JsonData/userData.json";
-import { COLUMNSTATEMENT } from "../../assets/JsonData/ColumnStatement";
+import { COLUMNS } from "../../assets/JsonData/Column";
 import { Filter } from "./Filter";
 
 /**
  * @author
- * @function AnalysicStatement
+ * @function TestTable
  **/
 
-export const AnalysicStatement = (props) => {
+export const TestTable = (props) => {
   const options = [
     { value: "", label: "Tất cả" },
-    { value: "1", label: "Tháng 1" },
-    { value: "2", label: "Tháng 2" },
-    { value: "3", label: "Tháng 3" },
-    { value: "4", label: "Tháng 4" },
-    { value: "5", label: "Tháng 5" },
-    { value: "6", label: "Tháng 6" },
-    { value: "7", label: "Tháng 7" },
     { value: "8", label: "Tháng 8" },
     { value: "9", label: "Tháng 9" },
     { value: "10", label: "Tháng 10" },
@@ -50,7 +43,6 @@ export const AnalysicStatement = (props) => {
   ];
   const options2 = [
     { value: "", label: "Tất cả" },
-    { value: "2019", label: "Năm 2019" },
     { value: "2020", label: "Năm 2020" },
     { value: "2021", label: "Năm 2021" },
   ];
@@ -78,16 +70,9 @@ export const AnalysicStatement = (props) => {
   const handler = (event) => {
     const value = event.value;
     setValueState(value);
-    var month = valueState.length == 1 ? "0" + valueState : valueState;
-    console.log(month);
-    setGlobalFilter(valueYear + "-" + month);
   };
   const handleYear = (e) => {
     setValueYear(e.value);
-
-    var month = valueState.length == 1 ? "0" + valueState : valueState;
-    console.log(month);
-    setGlobalFilter(e.value + "-" + month);
   };
   const handleDate = (e) => {
     setDate(e.value);
@@ -100,7 +85,7 @@ export const AnalysicStatement = (props) => {
   const handleType = (e) => {
     setGlobalFilter(e.value);
   };
-  const columns = useMemo(() => COLUMNSTATEMENT, []);
+  const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => donateUserJson, []);
   const tableInstance = useTable(
     {
@@ -135,42 +120,17 @@ export const AnalysicStatement = (props) => {
   const { globalFilter, pageIndex, pageSize, filter } = state;
 
   // toast
-  const notify = () => {
-    if (valueState != "" && valueYear != "") {
-      toast.success("🎄 Đã tải bản sao kê về máy", {
-        position: "top-right",
-        autoClose: 5222,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        width: "500px",
-      });
-    } else {
-      toast.error("Vui lòng chọn tháng và năm!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-  };
-
-  const errorDownload = () => {
-    toast.error("🦄 Wow so easy!", {
+  const notify = () =>
+    toast.success("🦄 Wow so easy!", {
       position: "top-right",
-      autoClose: 5000,
+      autoClose: 2222,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
+      width: "500px",
     });
-  };
 
   const [date, setDate] = useState();
   useEffect(() => {
@@ -218,10 +178,10 @@ export const AnalysicStatement = (props) => {
                 <div className="tab-btn ">
                   <Link to="/analysic">Tổng quan</Link>
                 </div>
-                <div className="tab-btn">
+                <div className="tab-btn active">
                   <Link to="/user">Danh sách ủng hộ</Link>
                 </div>
-                <div className="tab-btn active">
+                <div className="tab-btn">
                   <Link to="/statement">Sao kê</Link>
                 </div>
                 <div className="tab-btn">
@@ -246,21 +206,56 @@ export const AnalysicStatement = (props) => {
                   <div class="recentOrders">
                     <div className="statement__header">
                       <div className="option">
-                        <div className="month-year active">
-                          <Select
-                            placeholder="Chọn năm"
-                            className="honghong month"
-                            options={options2}
-                            onChange={handleYear}
-                          />
+                        <Filter
+                          filter={globalFilter}
+                          setFilter={setGlobalFilter}
+                        />
+                        <div className="date-picker">
+                          <DatePicker
+                            date={date}
+                            onDateChange={setDate}
+                            locale={vi}
+                          >
+                            {({ inputProps, focused }) => (
+                              <input
+                                className={
+                                  "input" + (focused ? " -focused" : "")
+                                }
+                                {...inputProps}
+                              />
+                            )}
+                          </DatePicker>
+                          <span onClick={handleDeleteDate}>
+                            <i class="far fa-trash-alt"></i>
+                          </span>
+                        </div>
+                        <div className="month-year">
                           <Select
                             placeholder="Chọn tháng"
-                            className="honghong year"
+                            className="honghong month"
                             options={options}
                             onChange={handler}
                           />
+                          <Select
+                            placeholder="Chọn năm"
+                            className="honghong year"
+                            options={options2}
+                            onChange={handleYear}
+                          />
                         </div>
-                        {/* <button onClick={notify}>Notify!</button> */}{" "}
+                        <Select
+                          placeholder="Phương thức"
+                          className="honghong method"
+                          options={optionMethod}
+                          onChange={handleMethod}
+                        />
+                        <Select
+                          placeholder="Chọn loại"
+                          className="honghong type"
+                          options={optionType}
+                          onChange={handleType}
+                        />
+                        {/* <button onClick={notify}>Notify!</button> */}
                         <ToastContainer
                           position="top-center"
                           autoClose={2222}
@@ -273,12 +268,8 @@ export const AnalysicStatement = (props) => {
                           pauseOnHover
                         />
                       </div>
-
-                      <a href="#" onClick={notify} class="btn">
-                        Tải bản sao kê
-                      </a>
                     </div>
-                    <table {...getTableProps()} className="statement">
+                    <table {...getTableProps()}>
                       <thead>
                         {headerGroups.map((headergroup) => (
                           <tr {...headergroup.getHeaderGroupProps()}>

@@ -11,6 +11,7 @@ import { FaqPage } from "./pages/homePage/FaqPage";
 import { AnaLysicItem } from "./pages/analysic/AnalysicItem";
 import { AnalysicStatement } from "./pages/analysic/AnalysicStatement";
 import { AnalysicUser } from "./pages/analysic/AnalysicUser";
+import { TestTable } from "./pages/analysic/TestTable";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/analysic" element={<AnaLysicItem />} />
         <Route path="/user" element={<AnalysicUser />} />
         <Route path="/statement" element={<AnalysicStatement />} />
+        <Route path="/achievement" element={<TestTable />} />
       </Routes>
     </div>
   );
