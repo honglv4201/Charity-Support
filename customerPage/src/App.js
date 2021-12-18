@@ -12,6 +12,8 @@ import { AnaLysicItem } from "./pages/analysic/AnalysicItem";
 import { AnalysicStatement } from "./pages/analysic/AnalysicStatement";
 import { AnalysicUser } from "./pages/analysic/AnalysicUser";
 import { TestTable } from "./pages/analysic/TestTable";
+import { CreatePostPage } from "./pages/post/createpost/CreatePostPage";
+import { PostPage } from "./pages/post/post/PostPage";
 
 function App() {
   return (
@@ -31,6 +33,10 @@ function App() {
         <Route path="/user" element={<AnalysicUser />} />
         <Route path="/statement" element={<AnalysicStatement />} />
         <Route path="/achievement" element={<TestTable />} />
+
+        {/* post page */}
+        <Route path="/createpost" element={<CreatePostPage />} />
+        <Route path="/post" element={<PostPage />} />
       </Routes>
     </div>
   );

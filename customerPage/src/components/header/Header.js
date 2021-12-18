@@ -29,7 +29,9 @@ export const Header = (props) => {
         <Link
           to="/"
           className={
-            props.type === "analysic" ? "header__logo hide" : "header__logo"
+            props.type === "analysic" || props.type === "createpost"
+              ? "header__logo hide"
+              : "header__logo"
           }
         >
           <img src={logoImg} alt="" />
@@ -38,7 +40,9 @@ export const Header = (props) => {
 
         <div
           className={
-            props.type === "analysic" ? "header__navbar hide" : "header__navbar"
+            props.type === "analysic" || props.type === "createpost"
+              ? "header__navbar hide"
+              : "header__navbar"
           }
         >
           <ul>
@@ -58,10 +62,16 @@ export const Header = (props) => {
         </div>
         <div
           className={
-            props.type === "analysic" ? "header__navbar" : "header__navbar hide"
+            props.type === "analysic" || props.type === "createpost"
+              ? "header__navbar"
+              : "header__navbar hide"
           }
         >
-          <h1 className="title">báo cáo thông tin</h1>
+          <h1 className="title">
+            {props.type === "analysic"
+              ? "báo cáo thông tin"
+              : "Tạo chương trình thiện nguyện"}
+          </h1>
         </div>
 
         <div className="header__account hide flex-align">

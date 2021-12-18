@@ -87,3 +87,26 @@
 .custom-toggle.active > .inner-circle {
   margin-left: 25px;
 }
+
+/* modal */
+.modal__wrapper {
+  position: fixed;
+  top: 0;
+
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.151);
+  z-index: 1;
+  display: grid;
+  place-content: center;
+  display: none;
+}
+.modal__wrapper .modal {
+  z-index: 10;
+  background-color: #fff;
+  min-width: 800px;
+  height: 500px;
+  padding: 25px;
+  border-radius: 10px;
+}

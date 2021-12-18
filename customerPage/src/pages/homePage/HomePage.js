@@ -137,7 +137,7 @@ export const HomePage = (props) => {
               >
                 Ủng hộ
               </Link>
-              <Link to="/detail" className="btn btn-detail zoom-anim">
+              <Link to="/post" className="btn btn-detail zoom-anim">
                 Chi tiết
               </Link>
             </div>

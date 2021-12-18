@@ -30,7 +30,7 @@
   );
   padding: 14px 30px;
   width: fit-content;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   color: var(--text-white);
   margin-top: 5px;
   display: flex;
@@ -492,7 +492,7 @@
 
 .donate-info .btn-donate button {
   padding: 12px 40px;
-  border-radius: var(--border-radius-small);
+  border-radius: 8px;
   background-image: linear-gradient(
     to top right,
     var(--third-color-green-dart),
