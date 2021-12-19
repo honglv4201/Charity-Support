@@ -205,14 +205,14 @@ export const AnalysicStatement = (props) => {
                 Chương trình tặng quà cho người lao động khu vực Sài Gòn và các
                 tỉnh bị giãn cách
               </div>
-              <div className="option">
+              {/* <div className="option">
                 <a className="detail-btn" href="#">
                   Xem chi tiết
                 </a>
                 <a className="save-btn" href="#">
                   Lưu lại
                 </a>
-              </div>
+              </div> */}
 
               <div className="option-tab">
                 <div className="tab-btn ">

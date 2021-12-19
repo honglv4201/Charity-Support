@@ -417,7 +417,7 @@
   width: 80%;
   height: 100%;
   border-radius: 10px;
-  background-color: rgb(105, 203, 216);
+  background-color: rgb(74, 207, 97);
 }
 .donate-item .status-bar span:after {
   display: none;
@@ -504,4 +504,9 @@
   margin: 15px 5px 0;
   margin-left: 10px;
   opacity: 0.8;
+}
+
+/* slider post  */
+.react-multiple-carousel__arrow {
+  background-color: #fff;
 }

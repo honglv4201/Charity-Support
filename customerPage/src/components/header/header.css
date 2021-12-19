@@ -10,7 +10,7 @@
   justify-content: space-around;
   position: relative;
   position: fixed;
-  z-index: 100;
+  z-index: 1122200;
   background-color: var(--white-color);
   top: 0;
   left: 0;
@@ -18,6 +18,7 @@
   padding-right: 100px;
   right: 0;
   transition: all 0.7s linear;
+  padding-bottom: -5px;
 }
 
 .header__wrapper::after {
@@ -25,7 +26,9 @@
   position: absolute;
   border-bottom: 3px solid rgba(202, 202, 202, 0.205);
   width: calc(100vw - 150px);
-  bottom: -5px;
+  bottom: 0px;
+  z-index: 1111;
+  background-color: #fff;
 }
 
 .header__logo {

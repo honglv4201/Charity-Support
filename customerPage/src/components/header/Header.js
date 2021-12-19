@@ -46,8 +46,8 @@ export const Header = (props) => {
           }
         >
           <ul>
-            <li className={props.link === "home" ? "active" : ""}>
-              <Link to="/">Ủng Hộ</Link>
+            <li className={props.link === "list" ? "active" : ""}>
+              <Link to="/list">Ủng Hộ</Link>
             </li>
             <li className={props.link === "volunteer" ? "active" : ""}>
               <Link to="/volunteer"> Tình nguyện viên</Link>

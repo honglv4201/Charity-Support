@@ -29,10 +29,10 @@ import { Filter } from "./Filter";
 
 /**
  * @author
- * @function AnalysicUser
+ * @function AnalysicResult
  **/
 
-export const AnalysicUser = (props) => {
+export const AnalysicResult = (props) => {
   const options = [
     { value: "", label: "Tất cả" },
     { value: "8", label: "Tháng 8" },
@@ -193,13 +193,13 @@ export const AnalysicUser = (props) => {
                 <div className="tab-btn ">
                   <Link to="/analysic">Tổng quan</Link>
                 </div>
-                <div className="tab-btn active">
+                <div className="tab-btn ">
                   <Link to="/user">Danh sách ủng hộ</Link>
                 </div>
                 <div className="tab-btn">
                   <Link to="/statement">Sao kê</Link>
                 </div>
-                <div className="tab-btn">
+                <div className="tab-btn active">
                   <Link to="/achievement">Thành quả</Link>
                 </div>{" "}
               </div>
