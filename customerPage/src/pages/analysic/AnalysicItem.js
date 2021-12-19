@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "../../components/header/Header";
+import Chart from "react-apexcharts";
 
 import "./analysicitem.css";
 import avatarImg from "../../assets/img/avatar.png";
@@ -14,6 +15,50 @@ import { donateUser } from "../../assets/JsonData/donateUser";
  **/
 
 export const AnaLysicItem = (props) => {
+  // chart
+
+  const state = {
+    series: [
+      {
+        name: "series1",
+        data: [31, 40, 28, 51, 42, 109, 100],
+      },
+      {
+        name: "series2",
+        data: [11, 32, 45, 32, 34, 52, 41],
+      },
+    ],
+    options: {
+      chart: {
+        height: 350,
+        type: "area",
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        curve: "smooth",
+      },
+      xaxis: {
+        type: "datetime",
+        categories: [
+          "2018-09-19T00:00:00.000Z",
+          "2018-09-19T01:30:00.000Z",
+          "2018-09-19T02:30:00.000Z",
+          "2018-09-19T03:30:00.000Z",
+          "2018-09-19T04:30:00.000Z",
+          "2018-09-19T05:30:00.000Z",
+          "2018-09-19T06:30:00.000Z",
+        ],
+      },
+      tooltip: {
+        x: {
+          format: "dd/MM/yy HH:mm",
+        },
+      },
+    },
+  };
+
   return (
     <div className="analysic-item-page">
       <Header type="analysic" />
@@ -32,14 +77,14 @@ export const AnaLysicItem = (props) => {
                 Chương trình tặng quà cho người lao động khu vực Sài Gòn và các
                 tỉnh bị giãn cách
               </div>
-              <div className="option">
+              {/* <div className="option" >
                 <a className="detail-btn" href="#">
                   Xem chi tiết
                 </a>
                 <a className="save-btn" href="#">
                   Lưu lại
                 </a>
-              </div>
+              </div> */}
 
               <div className="option-tab">
                 <div className="tab-btn active">
@@ -107,58 +152,13 @@ export const AnaLysicItem = (props) => {
                     </div>
                   </div>
                 </div>
-
                 <div class="details recentCustomers">
-                  <div class="recentOrders">
-                    <div class="cardHeader">
-                      <h2>Recent Orders</h2>
-                      <a href="#" class="btn">
-                        View All
-                      </a>
-                    </div>
-                    <table>
-                      <thead>
-                        <tr>
-                          <td>Avatar</td>
-                          <td>Tên</td>
-                          <td>Price</td>
-                          <td>Payment</td>
-                          <td>Status</td>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {donateUser.map((item, ind) => {
-                          if (true) {
-                            return (
-                              <tr>
-                                <td width="60px">
-                                  <div class="imgBx">
-                                    <img src={item.avatar} />
-                                  </div>
-                                </td>
-
-                                <td>{item.username}</td>
-                                <td>{item.money}</td>
-                                <td>{item.method}</td>
-                                <td>
-                                  <span
-                                    className={
-                                      item.type === "1"
-                                        ? "status once"
-                                        : "status monthly"
-                                    }
-                                  >
-                                    {item.type === "1"
-                                      ? "một lần"
-                                      : "hàng tháng"}
-                                  </span>
-                                </td>
-                              </tr>
-                            );
-                          }
-                        })}
-                      </tbody>
-                    </table>
+                  <div class="chart1">
+                    <Chart
+                      options={state.options}
+                      series={state.series}
+                      height="100%"
+                    />
                   </div>
                 </div>
               </div>
