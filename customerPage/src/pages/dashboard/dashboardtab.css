@@ -1,0 +1,61 @@
+.dashboardtab {
+  font-size: 1.6rem;
+  padding: 5px;
+}
+.dashboardtab .logo-name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.dashboardtab .tab-list {
+  margin-top: 50px;
+}
+.dashboardtab .tab-item {
+  margin-bottom: 10px;
+
+  cursor: pointer;
+  padding-left: 30px;
+  opacity: 0.7;
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 200px;
+  position: relative;
+}
+.dashboardtab .tab-item.active {
+  color: var(--third-color-orange);
+  opacity: 1;
+}
+.dashboardtab .tab-item.active::after {
+  content: "";
+  width: 10px;
+  border-radius: 3px;
+  height: 100%;
+  background-color: var(--third-color-orange);
+  top: 0;
+  left: -8px;
+  position: absolute;
+}
+.dashboardtab .tab-item:hover::after {
+  content: "";
+  width: 10px;
+  border-radius: 3px;
+  height: 100%;
+  background-color: var(--third-color-orange);
+  top: 0;
+  left: -8px;
+  position: absolute;
+}
+.dashboardtab .tab-item:hover {
+  background-color: var(--third-color-orange);
+  color: var(--white-color);
+  opacity: 1;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.dashboardtab .tab-item i,
+.dashboardtab .tab-item > a {
+  margin-right: 10px;
+}

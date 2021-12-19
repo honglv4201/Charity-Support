@@ -28,6 +28,7 @@ import { ListPost4 } from "./pages/post/listpost/listPostOwner/ListPost4";
 import { ListPost5 } from "./pages/post/listpost/listPostOwner/ListPost5";
 import { ListPost6 } from "./pages/post/listpost/listPostOwner/ListPost6";
 import { AnalysicResult } from "./pages/analysic/AnalysicResult";
+import { DashBoard } from "./pages/dashboard/DashBoard";
 
 function App() {
   return (
@@ -67,6 +68,9 @@ function App() {
         <Route path="/listpost/tuthien" element={<ListPost4 />} />
         <Route path="/listpost/hoicovidhcm" element={<ListPost5 />} />
         <Route path="/listpost/treemvietnam" element={<ListPost6 />} />
+
+        {/* dash board */}
+        <Route path="/dashboard" element={<DashBoard />} />
       </Routes>
     </div>
   );
