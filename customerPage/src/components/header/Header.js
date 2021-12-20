@@ -3,6 +3,8 @@ import logoImg from "../../assets/img/logo/charity icon.png";
 import { Link } from "react-router-dom";
 import "./header.css";
 import avatarImg from "../../assets/img/avatar.png";
+
+import userMenu from "../../assets/JsonData/user_menus.json";
 /**
  * @author
  * @function Header
@@ -56,7 +58,7 @@ export const Header = (props) => {
               <Link to="/faq">Trợ giúp</Link>
             </li>
             <li className={props.link === "aboutus" ? "active" : ""}>
-              Về chúng tôi
+              <Link to="/dashboard">Thống kê</Link>
             </li>
           </ul>
         </div>
@@ -74,10 +76,16 @@ export const Header = (props) => {
           </h1>
         </div>
 
-        <div className="header__account hide flex-align">
-          <div className="header__question">
+        <div
+          className={
+            localStorage.getItem("mykey") === "2"
+              ? "header__account flex-align"
+              : "header__account hide flex-align"
+          }
+        >
+          {/* <div className="header__question">
             <i class="far fa-question-circle"></i>
-          </div>
+          </div> */}
           <div className="header__notify">
             <i class="fas fa-bell"></i>
             <div className="notify-badge"></div>
@@ -91,19 +99,57 @@ export const Header = (props) => {
             <div className="toggle-down">
               <i class="fas fa-sort-down"></i>
             </div>
+            <div className="drop-down">
+              {userMenu.map((item, index) => (
+                <Link to={item.link} key={index}>
+                  <div
+                    className="notification-item"
+                    onClick={
+                      item.link === "/"
+                        ? () => {
+                            localStorage.removeItem("mykey");
+                            window.location.reload();
+                          }
+                        : ""
+                    }
+                  >
+                    <i className={item.icon}></i>
+                    <span>{item.content}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="header__account-login  flex-align">
+        <div
+          className={
+            localStorage.getItem("mykey") !== "2"
+              ? "header__account-login  flex-align"
+              : "header__account-login hide  flex-align"
+          }
+        >
           <div className="header__question">
             <i class="far fa-question-circle"></i>
           </div>
 
           <div className="header__user-login flex-align">
-            <Link to="/login" className="btn-auth login">
+            <Link
+              to="/login"
+              onClick={() => {
+                localStorage.setItem("loginto", "home");
+              }}
+              className="btn-auth login"
+            >
               Đăng nhập
             </Link>
-            <Link to="signup" className="btn-auth signup">
+            <Link
+              to="signup"
+              onClick={() => {
+                localStorage.setItem("loginto", "home");
+              }}
+              className="btn-auth signup"
+            >
               Đăng ký
             </Link>
           </div>

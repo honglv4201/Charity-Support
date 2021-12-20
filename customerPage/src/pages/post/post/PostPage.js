@@ -98,10 +98,22 @@ export const PostPage = (props) => {
           </div>
 
           <div className="funtion">
-            <Link className="report" to="/analysic">
+            <Link
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+              className="report"
+              to="/analysic"
+            >
               <i class="bx bxs-report"></i> Xem báo cáo
             </Link>
-            <Link className="donate" to="/donate">
+            <Link
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+              className="donate"
+              to="/donate"
+            >
               Ủng hộ
             </Link>
           </div>
@@ -200,7 +212,14 @@ export const PostPage = (props) => {
             <div className="recent-donates">
               <div className="txt-recent-donates">
                 <div className="txt">Đóng góp gần đây</div>
-                <Link to="/user">Xem tất cả</Link>
+                <Link
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                  to="/user"
+                >
+                  Xem tất cả
+                </Link>
               </div>
               {RecentDonates.map((value, ind) => (
                 <div className="item" key={ind}>

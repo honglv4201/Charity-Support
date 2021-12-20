@@ -19,13 +19,32 @@
 .analysic-item-page .right-pannel {
   flex: 7;
 }
+.analysic-item-page a.xxx {
+  display: inline-block;
+  margin-bottom: -20px;
+}
+.analysic-item-page .return-home {
+  margin-top: 30px;
+  margin-bottom: -40px;
+  margin-left: -150px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: var(--third-color-green);
+
+  background-color: rgba(231, 231, 231, 0.205);
+}
+.analysic-item-page .return-home:hover {
+  background-color: rgba(223, 223, 223, 0.671);
+}
+.analysic-item-page .return-home i {
+  margin-right: 8px;
+}
 
 /* RIGHT PANNEL */
 .analysic-item-page .container {
   position: relative;
   width: 100%;
 }
-
 /* main */
 .analysic-item-page .main {
   position: absolute;
@@ -348,6 +367,28 @@
 .details .recentOrders table.volunteer tr td:nth-child(8) {
   width: 110px !important;
   text-align: center;
+}
+
+/* duyet */
+.details .recentOrders table.duyet tr td:nth-child(3) {
+  width: 170px !important;
+}
+.details .recentOrders table.duyet tr td:nth-child(4) {
+  width: 150px !important;
+  text-align: center;
+}
+.details .recentOrders table.duyet tr td:nth-child(5) {
+  width: 160px !important;
+  text-align: center;
+}
+.details .recentOrders table {
+  font-weight: 500;
+}
+.details .recentOrders table.duyet tr td:nth-child(6) {
+  width: 140px !important;
+}
+.details .recentOrders table.duyet tr td:nth-child(7) {
+  width: 240px !important;
 }
 /* other */
 .status.once {

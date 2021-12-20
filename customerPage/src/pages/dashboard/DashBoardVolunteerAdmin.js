@@ -33,17 +33,17 @@ import {
   usePagination,
   useFilters,
 } from "react-table";
-import donateUserJson from "../../assets/JsonData/PostJson.json";
-import { COLUMNS } from "../../assets/JsonData/ColumnPost";
+import donateUserJson from "../../assets/JsonData/userAdminData.json";
+import { COLUMNS } from "../../assets/JsonData/ColumnUserAdmin";
 import { Filter } from "../analysic/Filter";
 import { DashBoardTopNav } from "./DashBoardTopNav";
 
 /**
  * @author
- * @function DashBoardChuongTrinh
+ * @function DashBoardVolunteerAdmin
  **/
 
-export const DashBoardChuongTrinh = (props) => {
+export const DashBoardVolunteerAdmin = (props) => {
   const options = [
     { value: "", label: "Tất cả" },
     { value: "8", label: "Tháng 8" },
@@ -63,36 +63,22 @@ export const DashBoardChuongTrinh = (props) => {
     { value: 50, label: "50" },
     { value: 100, label: "100" },
   ];
-  const optionTime = [
-    { value: "", label: "Tất cả" },
-    { value: "đã hết hạn", label: "Đã hoàn thành" },
-    { value: "rất gần hết hạn", label: "Dưới 3 ngày" },
-    { value: "sắp hết hạn", label: "Dưới 10 ngày" },
-    { value: "chưa hết hạn", label: "Còn lại" },
-  ];
   const optionType = [
     { value: "", label: "Tất cả" },
-    { value: "Covid 19", label: "Covid 19" },
-    { value: "Trẻ Em", label: "Trẻ Em" },
-    { value: "Người Già", label: "Người Già" },
-    { value: "Người Khuyết Tật", label: "Người Khuyết Tật" },
-    { value: "Ghép Tim", label: "Ghép Tim" },
-    { value: "Người Khó Khăn", label: "Người Khó Khăn" },
+    { value: "notreview", label: "Người mới" },
+    { value: "accept", label: "Tình nguyện viên" },
+    { value: "remove", label: "Đã xóa" },
   ];
   const optionMethod = [
     { value: "", label: "Tất cả" },
-    { value: "Hội chữ thập đỏ", label: "Hội chữ thập đỏ" },
-    { value: "Quỹ tình thương HCM", label: "Quỹ tình thương HCM" },
-    { value: "Bông sen vàng", label: "Bông sen vàng" },
-    { value: "Hội Covid Việt Nam", label: "Hội Covid Việt Nam" },
-    { value: "Trẻ Em việt Nam", label: "Trẻ Em việt Nam" },
-    { value: "Từ Thiện Hoài Linh", label: "Từ Thiện Hoài Linh" },
+    { value: "Momo", label: "MoMo" },
+    { value: "Zalo Pay", label: "Zalo Pay" },
+    { value: "Bank", label: "Ngân hàng" },
   ];
 
   const [valueState, setValueState] = useState("");
   const [valueYear, setValueYear] = useState("");
   const [method, setMethod] = useState("");
-  const [time, setTime] = useState("");
   const handler = (event) => {
     const value = event.value;
     setValueState(value);
@@ -104,10 +90,6 @@ export const DashBoardChuongTrinh = (props) => {
     setDate(e.value);
   };
 
-  const handleTime = (e) => {
-    setTime(e.value);
-    setGlobalFilter(e.value);
-  };
   const handleMethod = (e) => {
     setMethod(e.value);
     setGlobalFilter(e.value);
@@ -151,7 +133,7 @@ export const DashBoardChuongTrinh = (props) => {
 
   // toast
   const notify = () =>
-    toast.success("Thành công !", {
+    toast.success(" Đã thực hiện!", {
       position: "top-right",
       autoClose: 2222,
       hideProgressBar: false,
@@ -196,7 +178,7 @@ export const DashBoardChuongTrinh = (props) => {
     <div>
       <div className="dashboard">
         <div className="dashboard__left">
-          <DashBoardTab link="chuongtrinh" />
+          <DashBoardTab link="checkuser" />
         </div>
         <div className="clear"></div>
         <div className="dashboard__body">
@@ -225,6 +207,7 @@ export const DashBoardChuongTrinh = (props) => {
                 </div>
               </div>
             </div>
+
             <DashBoardTopNav />
           </div>
           {/* end : header */}
@@ -239,7 +222,7 @@ export const DashBoardChuongTrinh = (props) => {
                       <div class="toggle"></div>
                     </div>
 
-                    <div class="details recentCustomers dashboard-chuongtrinh">
+                    <div class="details recentCustomers statement">
                       <div class="recentOrders">
                         <div className="statement__header">
                           <div className="option">
@@ -247,24 +230,45 @@ export const DashBoardChuongTrinh = (props) => {
                               filter={globalFilter}
                               setFilter={setGlobalFilter}
                             />
+                            <div className="date-picker">
+                              <DatePicker
+                                date={date}
+                                onDateChange={setDate}
+                                locale={vi}
+                              >
+                                {({ inputProps, focused }) => (
+                                  <input
+                                    className={
+                                      "input" + (focused ? " -focused" : "")
+                                    }
+                                    {...inputProps}
+                                  />
+                                )}
+                              </DatePicker>
+                              <span onClick={handleDeleteDate}>
+                                <i class="far fa-trash-alt"></i>
+                              </span>
+                            </div>
+                            <div className="month-year">
+                              <Select
+                                placeholder="Chọn tháng"
+                                className="honghong month"
+                                options={options}
+                                onChange={handler}
+                              />
+                              <Select
+                                placeholder="Chọn năm"
+                                className="honghong year"
+                                options={options2}
+                                onChange={handleYear}
+                              />
+                            </div>
 
                             <Select
-                              placeholder="Tổ chức"
-                              className="honghong method"
-                              options={optionMethod}
-                              onChange={handleMethod}
-                            />
-                            <Select
-                              placeholder="Loại từ thiện"
+                              placeholder="Chọn hạng"
                               className="honghong type"
                               options={optionType}
                               onChange={handleType}
-                            />
-                            <Select
-                              placeholder="Cấp thiết"
-                              className="honghong type"
-                              options={optionTime}
-                              onChange={handleTime}
                             />
                             {/* <button onClick={notify}>Notify!</button> */}
                             <ToastContainer
@@ -283,10 +287,7 @@ export const DashBoardChuongTrinh = (props) => {
                             Xuất file
                           </a>
                         </div>
-                        <table
-                          {...getTableProps()}
-                          className="dashboard-chuongtrinh"
-                        >
+                        <table {...getTableProps()} className="duyet">
                           <thead>
                             {headerGroups.map((headergroup) => (
                               <tr {...headergroup.getHeaderGroupProps()}>

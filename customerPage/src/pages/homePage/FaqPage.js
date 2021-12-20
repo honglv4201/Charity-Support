@@ -187,7 +187,7 @@ export const FaqPage = (props) => {
             </span>
           </div>
         </div>
-        <footer>
+        <div className="ff">
           <div className="footer">
             <h2>Thắc mắc khác</h2>
             <p>
@@ -196,7 +196,7 @@ export const FaqPage = (props) => {
               <span className="email">charity@5ting.com</span>
             </p>
           </div>
-        </footer>
+        </div>
       </div>
     </React.Fragment>
   );

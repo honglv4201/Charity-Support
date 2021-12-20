@@ -36,6 +36,9 @@ import { DashBoardVolunteer } from "./pages/dashboard/DashBoardVolunteer";
 import { VolunteerSuccessPage } from "./pages/homePage/VolunteerSuccessPage";
 import { DonateMonthlyPage } from "./pages/donatepage/DonateMonthlyPage";
 import { RegisterOrgnizationPage } from "./pages/homePage/RegisterOrgnizationPage";
+import { ChuongTrinhSuccessPage } from "./pages/homePage/ChuongTrinhSuccessPage";
+import { DashBoardVolunteerAdmin } from "./pages/dashboard/DashBoardVolunteerAdmin";
+import { DashBoardChuongTrinhAdmin } from "./pages/dashboard/DashBoardChuongTrinhAdmin";
 
 function App() {
   return (
@@ -64,6 +67,10 @@ function App() {
 
         {/* post page */}
         <Route path="/createpost" element={<CreatePostPage />} />
+        <Route
+          path="/createpost-success"
+          element={<ChuongTrinhSuccessPage />}
+        />
         <Route path="/post" element={<PostPage />} />
         <Route path="/list" element={<ListPostAll />} />
 
@@ -91,6 +98,14 @@ function App() {
         />
         <Route path="/dashboard/monthly" element={<DashBoardMonthly />} />
         <Route path="/dashboard/volunteer" element={<DashBoardVolunteer />} />
+        <Route
+          path="/dashboard/postadmin"
+          element={<DashBoardChuongTrinhAdmin />}
+        />
+        <Route
+          path="/dashboard/checkuser"
+          element={<DashBoardVolunteerAdmin />}
+        />
       </Routes>
     </div>
   );
