@@ -34,7 +34,7 @@
 }
 .dashboard__body {
   background-color: #f0f2f4;
-  height: 100vh;
+  height: fit-content;
   width: 100%;
   margin-top: 0px;
 }
@@ -204,11 +204,13 @@
 }
 .dashboard__body .main-chart {
   width: 820px;
-  height: 380px;
+  height: 440px;
+
   background-color: #fff;
   padding: 20px;
   margin-left: 20px;
   border-radius: 15px;
+  padding-bottom: 70px;
 }
 
 .dashboard__body .top-donator .title {
@@ -338,6 +340,7 @@
   background-color: rgba(214, 214, 214, 0.226);
   color: rgb(134, 134, 134);
 }
+
 .dashboard__body td i.btn-see.accept {
   color: rgb(75, 204, 43);
   border: 1px solid rgb(75, 204, 43);
@@ -426,4 +429,33 @@
   border: 2px solid #b05e27;
   color: #b05e27;
   background-color: #fff8f4;
+}
+
+/* DASHBOARD */
+.dashboard__body .chart-row2 {
+  margin-top: 30px;
+}
+.dashboard__body .chart-row2 .chart2 {
+  width: 94%;
+}
+.dashboard__body .chart-row2 .chart3 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  width: 94%;
+  display: flex;
+  box-shadow: none !important;
+}
+.dashboard__body .chart-row2 .chart3 .top-donator {
+  width: 100px !important;
+  display: block;
+}
+.dashboard__body .chart-row2 .chart3 .pannel {
+  flex: 2;
+}
+.dashboard__body h1.chart-title {
+  margin-left: 20px;
+}
+.dashboard__body h1.chart-title.left {
+  margin-left: 100px;
+  margin-bottom: 30px;
 }
