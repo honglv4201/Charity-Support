@@ -64,9 +64,7 @@ export const AnaLysicItem = (props) => {
             <div class="container">
               <div class="main">
                 <div class="topbar">
-                  <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                  </div>
+                  <div class="toggle"></div>
                 </div>
 
                 <div class="cardBox">

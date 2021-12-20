@@ -41,17 +41,45 @@ export const ListPostAll = (props) => {
               Loại thiện nguyện
             </div>
             <div className="session-list">
-              <Link to="/list" className="active">
+              <Link
+                to="/list"
+                className="active"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 {" "}
                 Tất cả
               </Link>
 
-              <Link to="/listpost/covid">Covid 19</Link>
-              <Link to="/listpost/children">Trẻ Em</Link>
-              <Link to="/listpost/oldpeople">Người già</Link>
-              <Link to="/listpost/disability">Người Khuyết tật</Link>
-              <Link to="/listpost/heart">Ghép Tim</Link>
-              <Link to="/listpost/poorpeople">Người khó khăn</Link>
+              <Link to="/listpost/covid" onClick={() => window.scrollTo(0, 0)}>
+                Covid 19
+              </Link>
+              <Link
+                to="/listpost/children"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Trẻ Em
+              </Link>
+              <Link
+                to="/listpost/oldpeople"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Người già
+              </Link>
+              <Link
+                to="/listpost/disability"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Người Khuyết tật
+              </Link>
+              <Link to="/listpost/heart" onClick={() => window.scrollTo(0, 0)}>
+                Ghép Tim
+              </Link>
+              <Link
+                to="/listpost/poorpeople"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Người khó khăn
+              </Link>
             </div>
 
             <div className="session-title">
@@ -64,12 +92,42 @@ export const ListPostAll = (props) => {
                 Tất cả{" "}
               </Link>
 
-              <Link to="/listpost/chuthapdo">Hội chữ thập đỏ</Link>
-              <Link to="/listpost/tinhthuonghcm">Quỹ Tình Thương HCM</Link>
-              <Link to="/listpost/bongsenvang">Bông Sen Vàng</Link>
-              <Link to="/listpost/tuthien">Từ Thiện Hoài Linh</Link>
-              <Link to="/listpost/hoicovidhcm">Hội Covid HCM</Link>
-              <Link to="/listpost/treemvietnam">Trẻ Em Việt Nam</Link>
+              <Link
+                to="/listpost/chuthapdo"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Hội chữ thập đỏ
+              </Link>
+              <Link
+                to="/listpost/tinhthuonghcm"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Quỹ Tình Thương HCM
+              </Link>
+              <Link
+                to="/listpost/bongsenvang"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Bông Sen Vàng
+              </Link>
+              <Link
+                to="/listpost/tuthien"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Từ Thiện Hoài Linh
+              </Link>
+              <Link
+                to="/listpost/hoicovidhcm"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Hội Covid HCM
+              </Link>
+              <Link
+                to="/listpost/treemvietnam"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Trẻ Em Việt Nam
+              </Link>
             </div>
           </div>{" "}
           {/* end : left  pannel */}

@@ -4,7 +4,7 @@ import "./dashboard.css";
 import { DashBoardTab } from "./DashBoardTab";
 import avatarImg from "../../assets/img/avatar.png";
 import { Header } from "../../components/header/Header";
-import Chart from "react-C";
+import Chart from "react-apexcharts";
 
 // img
 import coinImg from "../../assets/img/coin.png";
@@ -60,13 +60,13 @@ export const DashBoard = (props) => {
     <div>
       <div className="dashboard">
         <div className="dashboard__left">
-          <DashBoardTab />
+          <DashBoardTab link="dashboard" />
         </div>
 
         <div className="dashboard__body">
           <div className="header">
             <div className="search-input">
-              <input type="text" />
+              <input type="text" placeholder="Tìm kiếm" />
               <i class="fas fa-search"></i>
             </div>
 
@@ -190,7 +190,70 @@ export const DashBoard = (props) => {
                     <div className="image-coin">
                       <img src={coinImg} alt="" />
                     </div>
-                    <span>35.000.000 VNĐ</span>
+                    <span>35.000.000 </span>
+                    <div className="vnd">VNĐ</div>
+                  </div>
+                </div>
+
+                <div className="item-user">
+                  <div className="image">
+                    <img
+                      src="https://pdp.edu.vn/wp-content/uploads/2021/05/hinh-anh-avatar-de-thuong.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="info">
+                    <div className="name">Nhậm Gia Luân</div>
+                    <div className="type">25 x một lần</div>
+                  </div>
+                  <div className="money">
+                    {" "}
+                    <div className="image-coin">
+                      <img src={coinImg} alt="" />
+                    </div>
+                    <span>18.600.000 </span>
+                    <div className="vnd">VNĐ</div>
+                  </div>
+                </div>
+
+                <div className="item-user">
+                  <div className="image">
+                    <img
+                      src="https://robohash.org/estminimaut.png?size=50x50&set=set1"
+                      alt=""
+                    />
+                  </div>
+                  <div className="info">
+                    <div className="name">Bạch Lộc</div>
+                    <div className="type">hàng tháng</div>
+                  </div>
+                  <div className="money">
+                    {" "}
+                    <div className="image-coin">
+                      <img src={coinImg} alt="" />
+                    </div>
+                    <span>8.500.000 </span>
+                    <div className="vnd">VNĐ</div>
+                  </div>
+                </div>
+
+                <div className="item-user">
+                  <div className="image">
+                    <img
+                      src="https://pdp.edu.vn/wp-content/uploads/2021/05/hinh-anh-avatar-de-thuong.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="info">
+                    <div className="name">Nhậm Gia Luân</div>
+                    <div className="type">25 x một lần</div>
+                  </div>
+                  <div className="money">
+                    {" "}
+                    <div className="image-coin">
+                      <img src={coinImg} alt="" />
+                    </div>
+                    <span>18.600.000</span> <div className="vnd">VNĐ</div>
                   </div>
                 </div>
               </div>

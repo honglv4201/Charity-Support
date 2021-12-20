@@ -29,11 +29,17 @@
   width: 280px;
   margin-top: 30px;
 }
+.clear {
+  clear: both;
+}
 .dashboard__body {
   background-color: #f0f2f4;
   height: 100vh;
   width: 100%;
   margin-top: 0px;
+}
+.dashboard__body .main {
+  background-color: #f0f2f4;
 }
 .dashboard__body .header {
   display: flex;
@@ -224,9 +230,13 @@
 .dashboard__body .list-user {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 }
 .dashboard__body .list-user .item-user {
   display: flex;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .dashboard__body .list-user .item-user .image {
   width: 50px;
@@ -238,8 +248,15 @@
   width: 100%;
 }
 .dashboard__body .item-user .image-coin {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
+  display: none;
+}
+.dashboard__body .item-user .vnd {
+  font-size: 1.2rem;
+  margin-top: 3px;
+  font-weight: 600;
+  opacity: 0.5;
 }
 .dashboard__body .item-user .image-coin img {
   width: 100%;
@@ -264,4 +281,108 @@
   font-weight: 600;
   opacity: 0.9;
   margin-top: 4px;
+}
+.dashboard__body .item-user .info .type {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 5px;
+  opacity: 0.7;
+}
+
+/* ==========USER ========== */
+.dashboard__body .analysic-item-page .details {
+  background-color: #fff;
+  height: fit-content;
+  margin-left: 20px;
+  width: fit-content;
+  margin-right: 10px;
+  margin-top: -35px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-left: 0 !important;
+}
+.dashboard__body .recentOrders {
+  padding-left: 30px !important;
+}
+
+/* ========== chuong trinh ========== */
+.dashboard__body td i.btn-see {
+  width: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 0px !important;
+}
+.dashboard__body td i.btn-see:hover {
+  transform: scale(1.1);
+}
+
+.dashboard__body td .status.d3 {
+  background-color: rgba(255, 214, 214, 0.479);
+  color: rgb(255, 60, 60);
+  padding: 4px 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.dashboard__body td .status.d10 {
+  background-color: rgba(255, 235, 181, 0.493);
+  color: rgb(199, 154, 30);
+  padding: 4px 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.dashboard__body td .status.d100 {
+  background-color: rgba(214, 255, 223, 0.582);
+  color: rgb(36, 172, 65);
+  padding: 4px 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.dashboard__body td .status.d0 {
+  background-color: rgba(219, 219, 219, 0.336);
+  color: rgba(148, 148, 148, 0.5);
+  padding: 4px 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* VOLUNTEER */
+.dashboard__body td span.rank {
+  padding: 10px 16px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(189, 189, 189, 0.438);
+}
+.dashboard__body td span.rank.top {
+  background-color: var(--third-color-orange);
+}
+.dashboard__body td span.hang {
+  padding: 4px 16px;
+  border-radius: 5px;
+  border: 2px solid #8267be;
+  color: #8267be;
+  background-color: #f8f5ff;
+}
+.dashboard__body td span.hangvang {
+  border: 2px solid #ffbd35;
+  color: #ffbd35;
+  background-color: #fffbf4;
+}
+
+.dashboard__body td span.hangbac {
+  border: 2px solid #928e5f;
+  color: #928e5f;
+  background-color: #fffff9;
+}
+.dashboard__body td span.hangdong {
+  border: 2px solid #b05e27;
+  color: #b05e27;
+  background-color: #fff8f4;
 }

@@ -9,21 +9,16 @@ import interviewImg from "../../assets/img/orgnization.jpg";
 import { Link } from "react-router-dom";
 /**
  * @author
- * @function Volunteer
+ * @function RegisterOrgnizationPage
  **/
 
-export const Volunteer = (props) => {
+export const RegisterOrgnizationPage = (props) => {
   return (
     <div className="volunteer_page__wrapper">
       <Header link="volunteer" />
       <div className="voluteer_page">
-        <div class="video__wrapper">
-          <video src={video} autoPlay muted loop type="mp4"></video>
-          <img src={maskImg} class="mask" />
-          <h2>Cứu trợ Covid 19</h2>
-        </div>
         <div className="volunteer__title">
-          <h1>Đăng kí tham gia tình nguyện viên</h1>
+          <h1>Đăng kí </h1>
         </div>
 
         <div className="volunteer__body">
