@@ -17,7 +17,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 // img
-import post1Img from "../../assets/img/homePagePost/post1.jpg";
+import post1Img from "../../assets/img/homePagePost/post8.jpg";
 import post2Img from "../../assets/img/homePagePost/post2.jpg";
 import post3Img from "../../assets/img/homePagePost/post3.jpg";
 import { ItemHomePage } from "../../components/donateItemHomePage/ItemHomePage";

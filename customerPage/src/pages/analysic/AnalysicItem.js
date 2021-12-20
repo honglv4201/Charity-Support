@@ -20,12 +20,13 @@ export const AnaLysicItem = (props) => {
   const state = {
     series: [
       {
-        name: "series1",
-        data: [31, 40, 28, 51, 42, 109, 100],
+        type: "column",
+        name: "Tiền quyên góp",
+        data: [3467000, 5060000, 7880000, 5060000, 6688000, 7500000, 4400000, 2200000, 5789000, 7100000, 5420000, 9677000, 5512000, 7898000, 11220000, 0, 0, 0, 0, 0],
       },
       {
-        name: "series2",
-        data: [11, 32, 45, 32, 34, 52, 41],
+        name: "Lượt quyên góp",
+        data: [11, 32, 45, 32, 34, 52, 41, 11, 32, 45, 32, 34, 52, 41, 55, 0, 0, 0, 0, 0],
       },
     ],
     options: {
@@ -33,28 +34,58 @@ export const AnaLysicItem = (props) => {
         height: 350,
         type: "area",
       },
-      dataLabels: {
-        enabled: false,
+      tooltip: {
+        followCursor: true,
       },
+      // dataLabels: {
+      //   enabled: true,
+      //   formatter: function (val) {
+      //     return `$${val}`
+      //   },
+      // },
       stroke: {
         curve: "smooth",
       },
       xaxis: {
-        type: "datetime",
         categories: [
-          "2018-09-19T00:00:00.000Z",
-          "2018-09-19T01:30:00.000Z",
-          "2018-09-19T02:30:00.000Z",
-          "2018-09-19T03:30:00.000Z",
-          "2018-09-19T04:30:00.000Z",
-          "2018-09-19T05:30:00.000Z",
-          "2018-09-19T06:30:00.000Z",
+          "1/12/2021",
+          "2/12/2021",
+          "3/12/2021",
+          "4/12/2021",
+          "5/12/2021",
+          "6/12/2021",
+          "7/12/2021",
+          "8/12/2021",
+          "9/12/2021",
+          "10/12/2021",
+          "11/12/2021",
+          "12/12/2021",
+          "13/12/2021",
+          "14/12/2021",
+          "15/12/2021",
+          "16/12/2021",
+          "17/12/2021",
+          "18/12/2021",
+          "19/12/2021",
+          "20/12/2021"
         ],
       },
-      tooltip: {
-        x: {
-          format: "dd/MM/yy HH:mm",
+      yaxis: [
+        {
+          title: {
+            text: "Tiền quyên góp",
+          },
         },
+        {
+          opposite: true,
+          title: {
+            text: "Lượt quyên góp",
+          },
+        },
+      ],
+      title: {
+        text: "Thống kê quyên góp",
+        align: "left",
       },
     },
   };
@@ -118,7 +149,7 @@ export const AnaLysicItem = (props) => {
                   <div class="card">
                     <div>
                       <div class="numbers">1,504</div>
-                      <div class="cardName">Daily Views</div>
+                      <div class="cardName">Lượt truy cập</div>
                     </div>
                     <div class="iconBx">
                       <ion-icon name="eye-outline"></ion-icon>
@@ -126,17 +157,8 @@ export const AnaLysicItem = (props) => {
                   </div>
                   <div class="card">
                     <div>
-                      <div class="numbers">80</div>
-                      <div class="cardName">Sales</div>
-                    </div>
-                    <div class="iconBx">
-                      <ion-icon name="cart-outline"></ion-icon>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div>
                       <div class="numbers">284</div>
-                      <div class="cardName">Comments</div>
+                      <div class="cardName">Bình luận</div>
                     </div>
                     <div class="iconBx">
                       <ion-icon name="chatbubbles-outline"></ion-icon>
@@ -144,11 +166,20 @@ export const AnaLysicItem = (props) => {
                   </div>
                   <div class="card">
                     <div>
-                      <div class="numbers">$7,842</div>
-                      <div class="cardName">Earning</div>
+                      <div class="numbers">17.000.000 VNĐ</div>
+                      <div class="cardName">Tiền quyên góp</div>
                     </div>
                     <div class="iconBx">
                       <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div>
+                      <div class="numbers">136</div>
+                      <div class="cardName">Lượt quyên góp</div>
+                    </div>
+                    <div class="iconBx">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </div>
                   </div>
                 </div>
