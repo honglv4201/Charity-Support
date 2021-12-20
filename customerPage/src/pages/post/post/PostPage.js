@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
 export const PostPage = (props) => {
   const images = [
     {
-      url: "https://bloganchoi.com/wp-content/uploads/2021/09/con-p3-scaled.jpeg",
+      url: "https://nld.mediacdn.vn/291774122806476800/2021/6/29/hh-tieu-vy-2-16249324754621698247974.jpg",
     },
 
     {
@@ -35,13 +35,13 @@ export const PostPage = (props) => {
       url: "https://cdnimg.vietnamplus.vn/uploaded/bokttj/2021_07_16/ttxvn_tphcm_khu_cach_ly_phong_toa.jpg",
     },
     {
-      url: "https://lh3.googleusercontent.com/proxy/n8ZD37gicPaQ1RVewd5XKCblNARp7kbDViIhIjziv_yLka-Nwr1lDGnUqhHEXPMlR_VsFnp-b6oqzTZYJLTEw5HSJnEAh-uya4BYh7WsjKChyL_8Wj2izlMk7CRJ_HLAsI2DEeZmYMKlZNYIPo3H2ZgM",
+      url: "https://baogialai.com.vn/dataimages/202108/original/images3066863_1_Anh____Duy_Nam__th__2_t__tr_i_qua__Ph__B__th__T_nh__o_ng_t_ng_v_t_d_ng_y_t_____ng_vi_n_c_c_t_nh_nguy_n_vi_n_t_i_ch_t_ki_m_so_t_ph_ng_ch_ng_d_ch_Covid_19_c_u_110..jpg",
     },
     {
       url: "https://baokhanhhoa.vn/dataimages/202108/original/images5464774_rau1.jpg",
     },
     {
-      url: "https://images.hcmcpv.org.vn/res/news/2020/11/29-11-2020-trao-1600-phan-qua-ho-tro-nguoi-dan-bi-anh-huong-dich-benh-covid19-959872D0.jpg",
+      url: "https://chuthapdophutho.org.vn/uploads/news/2021_10/247986495_1797815910605999_5192295485256171202_n.jpg",
     },
     {
       url: "https://images.hcmcpv.org.vn/res/news/2020/11/29-11-2020-trao-1600-phan-qua-ho-tro-nguoi-dan-bi-anh-huong-dich-benh-covid19-959872D0.jpg",
@@ -92,8 +92,8 @@ export const PostPage = (props) => {
               <p>Tổng tiền</p>
             </div>
             <div className="item">
-              <span>35</span>
-              <p>Lượt Ủng Hộ</p>
+              <span>63</span>
+              <p>Tình nguyện viên</p>
             </div>
           </div>
 
