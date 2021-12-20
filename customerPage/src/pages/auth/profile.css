@@ -130,8 +130,14 @@
 }
 .profile-page .chuongtrinh img {
   width: 180px;
+
   border-radius: 10px;
   margin-right: 30px;
+}
+.profile-page .chuongtrinh img.img-chuongtrinh {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
 }
 .profile-page .chuongtrinh .name-chuongtrinh {
   display: flex;
@@ -175,4 +181,10 @@
   margin-top: 25px;
   font-size: 1.3rem;
   font-weight: 600;
+}
+.profile-page .chuongtrinh .col3 > img {
+  width: 140px;
+}
+.profile-page .chuongtrinh .col3 {
+  padding-right: 0px;
 }

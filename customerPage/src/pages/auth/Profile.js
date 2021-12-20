@@ -14,7 +14,7 @@ import { ProfileTab } from "./ProfileTab";
 export const Profile = (props) => {
   // toast
   // toast
-  const notify = () => {
+  const notifyx = () => {
     if (true) {
       toast.success("🎄 Đã tải bản sao kê về máy", {
         position: "top-right",
@@ -72,10 +72,10 @@ export const Profile = (props) => {
             </div>
 
             <div className="button-wrap">
-              <button onClick={notify} className="btn btn-update">
+              <button onClick={notifyx} className="btn btn-update">
                 Cập nhật
               </button>
-              <button onClick={notify} className="btn btn-cancle">
+              <button onClick={notifyx} className="btn btn-cancle">
                 Hủy bỏ
               </button>
             </div>

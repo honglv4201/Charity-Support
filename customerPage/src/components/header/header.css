@@ -20,7 +20,10 @@
   transition: all 0.7s linear;
   padding-bottom: -5px;
 }
-
+.header__wrapper .chinhphu {
+  width: 40px;
+  margin-right: 5px;
+}
 .header__wrapper::after {
   content: "";
   position: absolute;

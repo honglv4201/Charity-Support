@@ -3,6 +3,7 @@ import logoImg from "../../assets/img/logo/charity icon.png";
 import { Link } from "react-router-dom";
 import "./header.css";
 import avatarImg from "../../assets/img/avatar.png";
+import chinhphuImg from "../../assets/img/chinhphu.png";
 
 import userMenu from "../../assets/JsonData/user_menus.json";
 /**
@@ -28,6 +29,12 @@ export const Header = (props) => {
   return (
     <div>
       <div ref={ref} className="header__wrapper ">
+        <img
+          className="chinhphu"
+          title="Tổ chức được hỗ trợ bởi chính phủ"
+          src={chinhphuImg}
+          alt=""
+        />{" "}
         <Link
           to="/"
           className={
@@ -39,7 +46,6 @@ export const Header = (props) => {
           <img src={logoImg} alt="" />
           <span>Charity Support</span>
         </Link>
-
         <div
           className={
             props.type === "analysic" || props.type === "createpost"
@@ -75,7 +81,6 @@ export const Header = (props) => {
               : "Tạo chương trình thiện nguyện"}
           </h1>
         </div>
-
         <div
           className={
             localStorage.getItem("mykey") === "2"
@@ -121,7 +126,6 @@ export const Header = (props) => {
             </div>
           </div>
         </div>
-
         <div
           className={
             localStorage.getItem("mykey") !== "2"

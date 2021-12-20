@@ -52,24 +52,30 @@ export const ProfileVolunteer = (props) => {
           <h1 className="title">Đăng kí tình nguyện viên</h1>
           <div className="chuongtrinh">
             <img
-              src="http://canhbuom.edu.vn/wp-content/uploads/2013/03/tre-em-mu-cang-chai-voi-nhung-nu-cuoi-toa-nang-hon-nhien.jpg"
+              className="img-chuongtrinh"
+              src="https://file1.dangcongsan.vn/data/0/images/2021/09/14/phammai/tinh-hinh-dich-benh.jpg?dpi=150&quality=100&w=780"
               alt=""
             />
             <div className="name-chuongtrinh">
-              <p>Ủng hộ các em nhỏ miền Tây</p>
+              <p>Chương trình hỗ trợ người nghèo trong dịch Covid</p>
               <span className="desc">
-                Cùng chung tay hỗ trợ xây dựng tủ sách cho hơn 20 điểm trường
-                thuộc vùng núi khó khăn của tỉnh Quảng Trị,
+                Trong điều kiện giãn cách xã hội phòng, chống Covid-19 tại Thành
+                phố Hồ Chí Minh kể từ trung tuần tháng 5/2021 đến nay; trước
+                những khó khăn của CBCN
               </span>
               <span className="onwer">
                 {" "}
-                <i class="fas fa-check-circle"></i>Hội Trẻ Em Việt Nam
+                <i class="fas fa-check-circle"></i>Hội Chống dịch Covid Nha
+                Trang
               </span>
             </div>
 
             <div className="col3">
-              <p className="price">Số tiền: 700.000 VNĐ</p>
-              <Link to="/post">Xem chi tiết chương trình</Link>
+              <p>Đang chờ xem xét ...</p>
+              <img
+                src="https://www.pngarts.com/files/7/Remote-Work-PNG-Image-Transparent.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
