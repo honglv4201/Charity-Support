@@ -35,19 +35,19 @@ export const Footer = (props) => {
         </ul>
         <ul className="menu">
           <li>
-            <a href="#">Home</a>
+            <a href="#">Trang chủ</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#">Về chúng tôi</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#">Đăng kí tình nguyện viên</a>
           </li>
           <li>
-            <a href="#">Team</a>
+            <a href="#">Chương trình từ thiện</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#">Liên hệ</a>
           </li>
         </ul>
         <p>©2021 Charity Support | All Rights Reserved</p>

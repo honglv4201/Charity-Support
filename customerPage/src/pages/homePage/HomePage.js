@@ -26,6 +26,7 @@ import { ItemHomePage } from "../../components/donateItemHomePage/ItemHomePage";
 import { featuredPost } from "../../assets/JsonData/featuredPost";
 import { MonthRegisterFullWidth1 } from "../../components/monthRegister/monthRegisterFullWidth1";
 import { Footer } from "../../components/footer/Footer";
+import Topnav from "../../components/topnav/TopNav";
 /**
  * @author
  * @function HomePage
@@ -71,6 +72,7 @@ export const HomePage = (props) => {
   return (
     <div>
       <Header link="home" />
+
       {/* Start : HomePage Top */}
       <div className="home__top">
         <div className="row">

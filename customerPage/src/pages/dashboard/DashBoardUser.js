@@ -36,6 +36,7 @@ import {
 import donateUserJson from "../../assets/JsonData/userDataTotal.json";
 import { COLUMNS } from "../../assets/JsonData/ColumnUserTotal";
 import { Filter } from "../../pages/analysic/Filter";
+import { DashBoardTopNav } from "./DashBoardTopNav";
 
 /**
  * @author
@@ -131,7 +132,7 @@ export const DashBoardUser = (props) => {
 
   // toast
   const notify = () =>
-    toast.success("🦄 Wow so easy!", {
+    toast.success("Thành công!", {
       position: "top-right",
       autoClose: 2222,
       hideProgressBar: false,
@@ -206,20 +207,7 @@ export const DashBoardUser = (props) => {
               </div>
             </div>
 
-            <div className="header__account-login  flex-align">
-              <div className="header__question">
-                <i class="far fa-question-circle"></i>
-              </div>
-
-              <div className="header__user-login flex-align">
-                <Link to="/login" className="btn-auth login">
-                  Đăng nhập
-                </Link>
-                <Link to="signup" className="btn-auth signup">
-                  Đăng ký
-                </Link>
-              </div>
-            </div>
+            <DashBoardTopNav />
           </div>
           {/* end : header */}
 
@@ -299,6 +287,9 @@ export const DashBoardUser = (props) => {
                               pauseOnHover
                             />
                           </div>
+                          <a href="#" onClick={notify} class="btn btn-export">
+                            Xuất file
+                          </a>
                         </div>
                         <table {...getTableProps()}>
                           <thead>

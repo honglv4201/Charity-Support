@@ -52,15 +52,36 @@ export const Login = (props) => {
                 <Link to="/forgetpassword">Quên mật khẩu?</Link>
               </div>
 
-              <Link to="/" onClick={handleLogin}>
+              <Link
+                to={
+                  localStorage.getItem("loginto") === "dashboard"
+                    ? "/dashboard"
+                    : "/"
+                }
+                onClick={handleLogin}
+              >
                 Đăng nhập
               </Link>
               <div className="social-login">
-                <Link to="/" className="session-method">
+                <Link
+                  to={
+                    localStorage.getItem("loginto") === "dashboard"
+                      ? "/dashboard"
+                      : "/"
+                  }
+                  className="session-method"
+                >
                   <img src={googleImg} alt="" />
                   <span>Google</span>
                 </Link>
-                <Link to="/" className="session-method">
+                <Link
+                  to={
+                    localStorage.getItem("loginto") === "dashboard"
+                      ? "/dashboard"
+                      : "/"
+                  }
+                  className="session-method"
+                >
                   <img className="fb" src={facebookImg} alt="" />
                   <span>Facebook</span>
                 </Link>

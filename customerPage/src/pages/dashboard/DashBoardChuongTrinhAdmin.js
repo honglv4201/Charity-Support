@@ -33,17 +33,17 @@ import {
   usePagination,
   useFilters,
 } from "react-table";
-import donateUserJson from "../../assets/JsonData/PostJson.json";
-import { COLUMNS } from "../../assets/JsonData/ColumnPost";
+import donateUserJson from "../../assets/JsonData/PostAdminJson.json";
+import { COLUMNS } from "../../assets/JsonData/ColumnPostAdmin";
 import { Filter } from "../analysic/Filter";
 import { DashBoardTopNav } from "./DashBoardTopNav";
 
 /**
  * @author
- * @function DashBoardChuongTrinh
+ * @function DashBoardChuongTrinhAdmin
  **/
 
-export const DashBoardChuongTrinh = (props) => {
+export const DashBoardChuongTrinhAdmin = (props) => {
   const options = [
     { value: "", label: "Tất cả" },
     { value: "8", label: "Tháng 8" },
@@ -151,7 +151,7 @@ export const DashBoardChuongTrinh = (props) => {
 
   // toast
   const notify = () =>
-    toast.success("Thành công !", {
+    toast.success("Xuất thành công!", {
       position: "top-right",
       autoClose: 2222,
       hideProgressBar: false,
@@ -196,7 +196,7 @@ export const DashBoardChuongTrinh = (props) => {
     <div>
       <div className="dashboard">
         <div className="dashboard__left">
-          <DashBoardTab link="chuongtrinh" />
+          <DashBoardTab link="postadmin" />
         </div>
         <div className="clear"></div>
         <div className="dashboard__body">
@@ -248,12 +248,6 @@ export const DashBoardChuongTrinh = (props) => {
                               setFilter={setGlobalFilter}
                             />
 
-                            <Select
-                              placeholder="Tổ chức"
-                              className="honghong method"
-                              options={optionMethod}
-                              onChange={handleMethod}
-                            />
                             <Select
                               placeholder="Loại từ thiện"
                               className="honghong type"

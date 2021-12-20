@@ -315,6 +315,47 @@
   padding: 10px;
   padding-right: 20px;
   padding-left: 0px !important;
+  cursor: pointer;
+}
+.dashboard__body td .adminduyet {
+  display: flex;
+}
+.dashboard__body td .adminduyet-open-modal {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 5px;
+  background-color: var(--third-color-green);
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.dashboard__body .btn-export {
+  background-color: var(--third-color-green) !important;
+  margin-top: -25px !important;
+}
+.dashboard__body td .adminduyet-open-modal.delete {
+  background-color: rgba(214, 214, 214, 0.226);
+  color: rgb(134, 134, 134);
+}
+.dashboard__body td i.btn-see.accept {
+  color: rgb(75, 204, 43);
+  border: 1px solid rgb(75, 204, 43);
+  width: fit-content;
+  padding: 7px 6px !important;
+  border-radius: 5px;
+  margin-right: 9px;
+  cursor: pointer;
+}
+.dashboard__body td i.btn-see.remove {
+  color: rgb(247, 39, 25);
+  border: 1px solid rgb(247, 39, 25);
+  width: fit-content;
+  margin-right: 40px;
+  cursor: pointer;
+
+  padding: 7px 10px !important;
+  border-radius: 5px;
 }
 .dashboard__body td i.btn-see:hover {
   transform: scale(1.1);

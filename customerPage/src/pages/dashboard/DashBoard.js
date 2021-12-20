@@ -8,6 +8,7 @@ import Chart from "react-apexcharts";
 
 // img
 import coinImg from "../../assets/img/coin.png";
+import { DashBoardTopNav } from "./DashBoardTopNav";
 
 /**
  * @author
@@ -90,20 +91,7 @@ export const DashBoard = (props) => {
               </div>
             </div>
 
-            <div className="header__account-login  flex-align">
-              <div className="header__question">
-                <i class="far fa-question-circle"></i>
-              </div>
-
-              <div className="header__user-login flex-align">
-                <Link to="/login" className="btn-auth login">
-                  Đăng nhập
-                </Link>
-                <Link to="signup" className="btn-auth signup">
-                  Đăng ký
-                </Link>
-              </div>
-            </div>
+            <DashBoardTopNav />
           </div>
           {/* end : header */}
 

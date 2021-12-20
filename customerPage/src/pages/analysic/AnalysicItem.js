@@ -67,6 +67,12 @@ export const AnaLysicItem = (props) => {
         <div className="left-pannel">
           <div className="left-pannel__container__wrapper">
             <div className="left-pannel__container">
+              <Link className="xxx" to="/">
+                <button className="return-home">
+                  {" "}
+                  <i class="fas fa-arrow-left"></i>Về trang chủ
+                </button>
+              </Link>
               <div className="post-left">
                 <div className="image">
                   <img src={post1Img} alt="" />

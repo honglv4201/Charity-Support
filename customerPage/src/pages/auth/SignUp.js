@@ -11,6 +11,9 @@ import googleImg from "../../assets/img/auth/google.png";
  **/
 
 export const SignUp = (props) => {
+  const handleLogin = () => {
+    localStorage.setItem("mykey", "2");
+  };
   return (
     <div>
       <div className="login">
@@ -50,13 +53,38 @@ export const SignUp = (props) => {
                     />
                   </div>
                 </div>
-                <Link to="/">Đăng kí</Link>
+                <Link
+                  to={
+                    localStorage.getItem("loginto") === "dashboard"
+                      ? "/dashboard"
+                      : "/"
+                  }
+                  onClick={handleLogin}
+                >
+                  Đăng kí
+                </Link>
                 <div className="social-login">
-                  <Link to="/" className="session-method">
+                  <Link
+                    to={
+                      localStorage.getItem("loginto") === "dashboard"
+                        ? "/dashboard"
+                        : "/"
+                    }
+                    onClick={handleLogin}
+                    className="session-method"
+                  >
                     <img src={googleImg} alt="" />
                     <span>Google</span>
                   </Link>
-                  <Link to="/" className="session-method">
+                  <Link
+                    to={
+                      localStorage.getItem("loginto") === "dashboard"
+                        ? "/dashboard"
+                        : "/"
+                    }
+                    onClick={handleLogin}
+                    className="session-method"
+                  >
                     <img className="fb" src={facebookImg} alt="" />
                     <span>Facebook</span>
                   </Link>

@@ -73,7 +73,7 @@
 }
 
 /* Footer */
-.main-faq-about-us__wrapper footer {
+.main-faq-about-us__wrapper .ff {
   padding: 0px 300px;
 }
 .main-faq-about-us__wrapper .footer {
@@ -86,7 +86,7 @@
   margin-top: 50px;
 }
 
-.main-faq-about-us__wrapper footer h2 {
+.main-faq-about-us__wrapper .ff h2 {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.075em;
@@ -95,27 +95,30 @@
   margin-left: 30px;
 }
 
-.main-faq-about-us__wrapper footer p {
+.main-faq-about-us__wrapper .ff p {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.8em;
   margin-bottom: 40px;
   margin-left: 30px;
 }
-.main-faq-about-us__wrapper footer a {
+.main-faq-about-us__wrapper .ff a {
   font-weight: 600;
   color: var(--third-color-green);
   text-decoration: underline;
 }
-.main-faq-about-us__wrapper footer .email {
+.main-faq-about-us__wrapper .ff .email {
   font-weight: 600;
   opacity: 0.7;
 }
 @media (min-width: 720px) {
-  .main-faq-about-us__wrapper footer p {
+  .main-faq-about-us__wrapper .ff p {
     width: 80%;
   }
 }
 .main-faq-about-us__wrapper {
   width: 100%;
+}
+.main-faq-about-us__wrapper .ff {
+  background-color: white !important;
 }
