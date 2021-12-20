@@ -10,7 +10,7 @@
   justify-content: space-around;
   position: relative;
   position: fixed;
-  z-index: 1122200;
+  z-index: 111;
   background-color: var(--white-color);
   top: 0;
   left: 0;
@@ -217,7 +217,7 @@
   top: calc(100% + 5px);
   box-shadow: var(--box-shadow);
   border-radius: 15px;
-  z-index: 1200000;
+  z-index: 1212120;
 }
 .header__wrapper .header__user::after {
   content: "";

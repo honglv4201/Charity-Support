@@ -39,6 +39,14 @@
 .analysic-item-page .return-home i {
   margin-right: 8px;
 }
+.analysic-item-page .chart1 .chart-title {
+  font-size: 2.1rem;
+  margin: 10px 0 20px 15px;
+}
+.analysic-item-page .card .money {
+  font-size: 1.6rem !important;
+  font-weight: 600 !important;
+}
 
 /* RIGHT PANNEL */
 .analysic-item-page .container {
@@ -131,30 +139,33 @@
 .analysic-item-page .cardBox .card {
   position: relative;
   background: var(--white);
-  padding: 30px;
-  border-radius: 20px;
+  padding: 20px 25px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.05);
 }
 .analysic-item-page .cardBox .card .numbers {
   position: relative;
   font-weight: 500;
-  font-size: 2.5em;
+  font-size: 2.2rem;
   color: var(--blue);
 }
 .cardBox .card .cardName {
   color: var(--black2);
   font-size: 1.1em;
-  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: -10px !important;
+  opacity: 0.8;
 }
 .analysic-item-page .cardBox .card .iconBx {
-  font-size: 3.5em;
+  font-size: 3rem;
   color: var(--black2);
 }
 .analysic-item-page .cardBox .card:hover {
-  background: var(--blue);
+  background: var(--third-color-green);
+  color: white;
 }
 .analysic-item-page .cardBox .card:hover .numbers,
 .analysic-item-page .cardBox .card:hover .cardName,
@@ -268,8 +279,11 @@
 .details .recentOrders table.statement tr td {
   padding: 30px !important;
 }
+.details .recentOrders table.statement tr td:nth-child(2) {
+  width: 250px;
+}
 .details .recentOrders table.statement tr td:nth-child(3) {
-  width: 140px;
+  width: 180px;
   text-align: end;
 }
 .details .recentOrders table.statement tr td:nth-child(4) {
@@ -338,6 +352,25 @@
 }
 .details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(7) {
   width: 80px;
+}
+/*  page user donate */
+.details .recentOrders table.user-donate {
+}
+.details .recentOrders.user-donate {
+  padding-left: 10px;
+  padding-right: 0px;
+}
+.details .recentOrders table.user-donate tr td:nth-child(3) {
+  width: 220px;
+  line-height: 1.8;
+}
+.details .recentOrders table.user-donate tr td:nth-child(4) {
+  width: 180px;
+  text-align: center;
+}
+.details .recentOrders table.user-donate tr td:nth-child(6) {
+  width: 126px;
+  text-align: center;
 }
 /* monthly */
 .details .recentOrders table.monthly tr td:nth-child(7) {

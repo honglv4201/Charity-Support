@@ -24,7 +24,7 @@
   {
     "id": 3,
     "avatar": "https://robohash.org/enimreprehenderitiusto.png?size=50x50&set=set1",
-    "username": "Hoàng Nguyễn Phúc Nguyên Chương",
+    "username": "Hoàng Nguyễn Phúc",
     "money": "1.000.000 VNĐ",
     "method": "Momo",
     "type": "mot lan",
@@ -47,7 +47,7 @@
     "id": 5,
     "avatar": "https://robohash.org/eaeaqui.png?size=50x50&set=set1",
     "username": "Nguyễn Trần Quốc Duy",
-    "money": "3.000.000",
+    "money": "3.000.000 VNĐ",
     "method": "Momo",
     "type": "mot lan",
     "month": 3,
@@ -563,7 +563,7 @@
   {
     "id": 3,
     "avatar": "https://robohash.org/enimreprehenderitiusto.png?size=50x50&set=set1",
-    "username": "Hoàng Nguyễn Phúc Nguyên Chương",
+    "username": "Hoàng Nguyễn Phúc",
     "money": "1.000.000 VNĐ",
     "method": "Momo",
     "type": "mot lan",

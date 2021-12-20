@@ -39,6 +39,10 @@ import { RegisterOrgnizationPage } from "./pages/homePage/RegisterOrgnizationPag
 import { ChuongTrinhSuccessPage } from "./pages/homePage/ChuongTrinhSuccessPage";
 import { DashBoardVolunteerAdmin } from "./pages/dashboard/DashBoardVolunteerAdmin";
 import { DashBoardChuongTrinhAdmin } from "./pages/dashboard/DashBoardChuongTrinhAdmin";
+import { Profile } from "./pages/auth/Profile";
+import { ProfilePassword } from "./pages/auth/ProfilePassword";
+import { ProfileDonate } from "./pages/auth/ProfileDonate";
+import { ProfileVolunteer } from "./pages/auth/ProfileVolunteer";
 
 function App() {
   return (
@@ -51,6 +55,10 @@ function App() {
         <Route path="/paying-complete" element={<PayCompletePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/password" element={<ProfilePassword />} />
+        <Route path="/profile/donate" element={<ProfileDonate />} />
+        <Route path="/profile/volunteer" element={<ProfileVolunteer />} />
 
         {/* link  */}
         <Route path="/volunteer" element={<Volunteer />} />

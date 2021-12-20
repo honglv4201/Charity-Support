@@ -22,11 +22,18 @@ export const AnaLysicItem = (props) => {
       {
         type: "column",
         name: "Tiền quyên góp",
-        data: [3467000, 5060000, 7880000, 5060000, 6688000, 7500000, 4400000, 2200000, 5789000, 7100000, 5420000, 9677000, 5512000, 7898000, 11220000, 0, 0, 0, 0, 0],
+        data: [
+          3467000, 5060000, 7880000, 5060000, 6688000, 7500000, 4400000,
+          2200000, 5789000, 7100000, 5420000, 9677000, 5512000, 7898000,
+          11220000, 0, 0, 0, 0, 0,
+        ],
       },
       {
         name: "Lượt quyên góp",
-        data: [11, 32, 45, 32, 34, 52, 41, 11, 32, 45, 32, 34, 52, 41, 55, 0, 0, 0, 0, 0],
+        data: [
+          11, 32, 45, 32, 34, 52, 41, 11, 32, 45, 32, 34, 52, 41, 55, 0, 0, 0,
+          0, 0,
+        ],
       },
     ],
     options: {
@@ -67,24 +74,24 @@ export const AnaLysicItem = (props) => {
           "17/12/2021",
           "18/12/2021",
           "19/12/2021",
-          "20/12/2021"
+          "20/12/2021",
         ],
       },
       yaxis: [
         {
           title: {
-            text: "Tiền quyên góp",
+            text: "",
           },
         },
         {
           opposite: true,
           title: {
-            text: "Lượt quyên góp",
+            text: "",
           },
         },
       ],
       title: {
-        text: "Thống kê quyên góp",
+        text: "",
         align: "left",
       },
     },
@@ -133,9 +140,9 @@ export const AnaLysicItem = (props) => {
                 <div className="tab-btn">
                   <Link to="/statement">Sao kê</Link>
                 </div>
-                <div className="tab-btn">
+                {/* <div className="tab-btn">
                   <Link to="/achievement">Thành quả</Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -151,44 +158,48 @@ export const AnaLysicItem = (props) => {
 
                 <div class="cardBox">
                   <div class="card">
+                    {" "}
+                    <div class="iconBx">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
                     <div>
                       <div class="numbers">1,504</div>
                       <div class="cardName">Lượt truy cập</div>
                     </div>
+                  </div>
+                  <div class="card">
                     <div class="iconBx">
-                      <ion-icon name="eye-outline"></ion-icon>
+                      <i class="fas fa-child"></i>
+                    </div>
+                    <div>
+                      <div class="numbers">84</div>
+                      <div class="cardName">Tình nguyện viên</div>
                     </div>
                   </div>
                   <div class="card">
-                    <div>
-                      <div class="numbers">284</div>
-                      <div class="cardName">Bình luận</div>
-                    </div>
-                    <div class="iconBx">
-                      <ion-icon name="chatbubbles-outline"></ion-icon>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div>
-                      <div class="numbers">17.000.000 VNĐ</div>
-                      <div class="cardName">Tiền quyên góp</div>
-                    </div>
+                    {" "}
                     <div class="iconBx">
                       <ion-icon name="cash-outline"></ion-icon>
                     </div>
+                    <div>
+                      <div class="numbers money">17.000.000 VNĐ</div>
+                      <div class="cardName">Tiền quyên góp</div>
+                    </div>
                   </div>
                   <div class="card">
+                    {" "}
+                    <div class="iconBx">
+                      <i class="fas fa-hand-holding-heart"></i>
+                    </div>
                     <div>
                       <div class="numbers">136</div>
                       <div class="cardName">Lượt quyên góp</div>
-                    </div>
-                    <div class="iconBx">
-                      <ion-icon name="cart-outline"></ion-icon>
                     </div>
                   </div>
                 </div>
                 <div class="details recentCustomers">
                   <div class="chart1">
+                    <h1 className="chart-title">Thống kê quyên góp</h1>
                     <Chart
                       options={state.options}
                       series={state.series}

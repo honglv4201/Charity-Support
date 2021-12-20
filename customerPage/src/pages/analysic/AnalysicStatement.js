@@ -195,6 +195,12 @@ export const AnalysicStatement = (props) => {
         <div className="left-pannel">
           <div className="left-pannel__container__wrapper">
             <div className="left-pannel__container">
+              <Link className="xxx" to="/">
+                <button className="return-home">
+                  {" "}
+                  <i class="fas fa-arrow-left"></i>Về trang chủ
+                </button>
+              </Link>
               <div className="post-left">
                 <div className="image">
                   <img src={post1Img} alt="" />
@@ -224,9 +230,9 @@ export const AnalysicStatement = (props) => {
                 <div className="tab-btn active">
                   <Link to="/statement">Sao kê</Link>
                 </div>
-                <div className="tab-btn">
+                {/* <div className="tab-btn">
                   <Link to="/achievement">Thành quả</Link>
-                </div>{" "}
+                </div>{" "} */}
               </div>
             </div>
           </div>
@@ -241,7 +247,7 @@ export const AnalysicStatement = (props) => {
                 </div>
 
                 <div class="details recentCustomers statement">
-                  <div class="recentOrders">
+                  <div class="recentOrders user-donate">
                     <div className="statement__header">
                       <div className="option">
                         <div className="month-year active">

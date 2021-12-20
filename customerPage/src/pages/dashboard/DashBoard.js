@@ -21,11 +21,18 @@ export const DashBoard = (props) => {
       {
         type: "column",
         name: "Tiền quyên góp",
-        data: [3467000, 5060000, 7880000, 5060000, 6688000, 7500000, 4400000, 2200000, 5789000, 7100000, 5420000, 9677000, 5512000, 7898000, 11220000, 0, 0, 0, 0, 0],
+        data: [
+          3467000, 5060000, 7880000, 5060000, 6688000, 7500000, 4400000,
+          2200000, 5789000, 7100000, 5420000, 9677000, 5512000, 7898000,
+          11220000, 0, 0, 0, 0, 0,
+        ],
       },
       {
         name: "Lượt quyên góp",
-        data: [11, 32, 45, 32, 34, 52, 41, 11, 32, 45, 32, 34, 52, 41, 55, 0, 0, 0, 0, 0],
+        data: [
+          11, 32, 45, 32, 34, 52, 41, 11, 32, 45, 32, 34, 52, 41, 55, 0, 0, 0,
+          0, 0,
+        ],
       },
     ],
     options: {
@@ -60,24 +67,24 @@ export const DashBoard = (props) => {
           "17/12/2021",
           "18/12/2021",
           "19/12/2021",
-          "20/12/2021"
+          "20/12/2021",
         ],
       },
       yaxis: [
         {
           title: {
-            text: "Tiền quyên góp",
+            text: "",
           },
         },
         {
           opposite: true,
           title: {
-            text: "Lượt quyên góp",
+            text: "",
           },
         },
       ],
       title: {
-        text: "Thống kê Quyên góp",
+        text: "",
         align: "left",
       },
     },
@@ -106,33 +113,43 @@ export const DashBoard = (props) => {
                 show: true,
                 showAlways: true,
                 fontSize: "24px",
-                color: "#2787AB"
-              }
-            }
-          }
-        }
-      }
-    }
+                color: "#2787AB",
+              },
+            },
+          },
+        },
+      },
+    },
   };
 
   const state3 = {
-    series: [{
-      name: 'Người trong độ tuổi lao động',
-      data: [30, 45, 42, 50, 34, 44, 67, 30, 33, 27, 32, 34, 52, 50, 30, 0, 0, 0, 0, 0]
-    }, {
-      name: 'Người trên tuổi lao động',
-      data: [67, 55, 72, 61, 44, 78, 66, 87, 59, 69, 79, 54, 45, 66, 42, 0, 0, 0, 0, 0]
-    }],
+    series: [
+      {
+        name: "Người trong độ tuổi lao động",
+        data: [
+          30, 45, 42, 50, 34, 44, 67, 30, 33, 27, 32, 34, 52, 50, 30, 0, 0, 0,
+          0, 0,
+        ],
+      },
+      {
+        name: "Người trên tuổi lao động",
+        data: [
+          67, 55, 72, 61, 44, 78, 66, 87, 59, 69, 79, 54, 45, 66, 42, 0, 0, 0,
+          0, 0,
+        ],
+      },
+    ],
     options: {
       chart: {
         height: 350,
-        type: 'area'
+        type: "area",
+        fontFamily: "Roboto, sans-serif",
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
       stroke: {
-        curve: 'smooth'
+        curve: "smooth",
       },
       xaxis: {
         categories: [
@@ -155,14 +172,14 @@ export const DashBoard = (props) => {
           "17/12/2021",
           "18/12/2021",
           "19/12/2021",
-          "20/12/2021"
+          "20/12/2021",
         ],
       },
       title: {
-        text: "Thống kê Người dùng mới",
+        text: "",
         align: "left",
       },
-    }
+    },
   };
 
   return (
@@ -261,6 +278,7 @@ export const DashBoard = (props) => {
           <div className="second-pannel">
             <div className="main-chart">
               {" "}
+              <h1 className="chart-title">Thống kê đóng góp</h1>
               <Chart
                 options={state.options}
                 series={state.series}
@@ -355,23 +373,117 @@ export const DashBoard = (props) => {
               </div>
             </div>
           </div>
-          <div className="main-chart">
-            {" "}
-            <Chart
-              options={state2.options}
-              series={state2.series}
-              height="100%"
-              type="donut"
-            />
-          </div>
-          <div className="main-chart">
-            {" "}
-            <Chart
-              options={state3.options}
-              series={state3.series}
-              height="100%"
-              type="area"
-            />
+
+          <div className="chart-row2">
+            <div className="main-chart chart2">
+              {" "}
+              <h1 className="chart-title">Người dùng mới </h1>
+              <Chart
+                options={state3.options}
+                series={state3.series}
+                height="100%"
+                type="area"
+              />
+            </div>
+            <div className="main-chart chart3">
+              <div className="top-donator donator2">
+                <h3 className="title">Tổ chức hoạt động tốt nhất</h3>
+                <div className="list-user">
+                  <div className="item-user">
+                    <div className="image">
+                      <img
+                        src="https://img2.thuthuatphanmem.vn/uploads/2019/01/05/avatar-chibi-doi-2_042810274.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div className="info">
+                      <div className="name">Hội Covid HCM</div>
+                      <div className="type">Hồ Chí Minh</div>
+                    </div>
+                    <div className="money">
+                      {" "}
+                      <div className="image-coin">
+                        <img src={coinImg} alt="" />
+                      </div>
+                      <span>125.000.000 </span>
+                      <div className="vnd">VNĐ</div>
+                    </div>
+                  </div>
+
+                  <div className="item-user">
+                    <div className="image">
+                      <img
+                        src="https://pdp.edu.vn/wp-content/uploads/2021/05/hinh-anh-avatar-de-thuong.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div className="info">
+                      <div className="name">Nhậm Gia Luân</div>
+                      <div className="type">25 x một lần</div>
+                    </div>
+                    <div className="money">
+                      {" "}
+                      <div className="image-coin">
+                        <img src={coinImg} alt="" />
+                      </div>
+                      <span>18.600.000 </span>
+                      <div className="vnd">VNĐ</div>
+                    </div>
+                  </div>
+
+                  <div className="item-user">
+                    <div className="image">
+                      <img
+                        src="https://robohash.org/estminimaut.png?size=50x50&set=set1"
+                        alt=""
+                      />
+                    </div>
+                    <div className="info">
+                      <div className="name">Bạch Lộc</div>
+                      <div className="type">hàng tháng</div>
+                    </div>
+                    <div className="money">
+                      {" "}
+                      <div className="image-coin">
+                        <img src={coinImg} alt="" />
+                      </div>
+                      <span>8.500.000 </span>
+                      <div className="vnd">VNĐ</div>
+                    </div>
+                  </div>
+
+                  <div className="item-user">
+                    <div className="image">
+                      <img
+                        src="https://pdp.edu.vn/wp-content/uploads/2021/05/hinh-anh-avatar-de-thuong.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div className="info">
+                      <div className="name">Nhậm Gia Luân</div>
+                      <div className="type">25 x một lần</div>
+                    </div>
+                    <div className="money">
+                      {" "}
+                      <div className="image-coin">
+                        <img src={coinImg} alt="" />
+                      </div>
+                      <span>18.600.000</span> <div className="vnd">VNĐ</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pannel">
+                <h1 className="chart-title left">So sánh các tổ chức</h1>
+                <Chart
+                  options={state2.options}
+                  series={state2.series}
+                  height="100%"
+                  type="donut"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
