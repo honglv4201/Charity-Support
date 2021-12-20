@@ -19,12 +19,13 @@ export const DashBoard = (props) => {
   const state = {
     series: [
       {
-        name: "series1",
-        data: [31, 40, 28, 51, 42, 109, 100],
+        type: "column",
+        name: "Tiền quyên góp",
+        data: [3467000, 5060000, 7880000, 5060000, 6688000, 7500000, 4400000, 2200000, 5789000, 7100000, 5420000, 9677000, 5512000, 7898000, 11220000, 0, 0, 0, 0, 0],
       },
       {
-        name: "series2",
-        data: [11, 32, 45, 32, 34, 52, 41],
+        name: "Lượt quyên góp",
+        data: [11, 32, 45, 32, 34, 52, 41, 11, 32, 45, 32, 34, 52, 41, 55, 0, 0, 0, 0, 0],
       },
     ],
     options: {
@@ -39,24 +40,131 @@ export const DashBoard = (props) => {
         curve: "smooth",
       },
       xaxis: {
-        type: "datetime",
         categories: [
-          "2018-09-19T00:00:00.000Z",
-          "2018-09-19T01:30:00.000Z",
-          "2018-09-19T02:30:00.000Z",
-          "2018-09-19T03:30:00.000Z",
-          "2018-09-19T04:30:00.000Z",
-          "2018-09-19T05:30:00.000Z",
-          "2018-09-19T06:30:00.000Z",
+          "1/12/2021",
+          "2/12/2021",
+          "3/12/2021",
+          "4/12/2021",
+          "5/12/2021",
+          "6/12/2021",
+          "7/12/2021",
+          "8/12/2021",
+          "9/12/2021",
+          "10/12/2021",
+          "11/12/2021",
+          "12/12/2021",
+          "13/12/2021",
+          "14/12/2021",
+          "15/12/2021",
+          "16/12/2021",
+          "17/12/2021",
+          "18/12/2021",
+          "19/12/2021",
+          "20/12/2021"
         ],
       },
-      tooltip: {
-        x: {
-          format: "dd/MM/yy HH:mm",
+      yaxis: [
+        {
+          title: {
+            text: "Tiền quyên góp",
+          },
         },
+        {
+          opposite: true,
+          title: {
+            text: "Lượt quyên góp",
+          },
+        },
+      ],
+      title: {
+        text: "Thống kê Quyên góp",
+        align: "left",
       },
     },
   };
+
+  const state2 = {
+    series: [33000000, 17200000, 27650000, 44225000, 57550000, 45670000],
+    options: {
+      series: [33000000, 17200000, 27650000, 44225000, 57550000, 45670000],
+      labels: [
+        "Hội chữ thập đỏ",
+        "Quỹ tình thương HCM",
+        "Bông sen vàng",
+        "Hội Covid Việt Nam",
+        "Trẻ Em việt Nam",
+        "Từ Thiện Hoài Linh",
+      ],
+      plotOptions: {
+        pie: {
+          expandOnClick: false,
+          donut: {
+            size: "50px",
+            labels: {
+              show: true,
+              total: {
+                show: true,
+                showAlways: true,
+                fontSize: "24px",
+                color: "#2787AB"
+              }
+            }
+          }
+        }
+      }
+    }
+  };
+
+  const state3 = {
+    series: [{
+      name: 'Người trong độ tuổi lao động',
+      data: [30, 45, 42, 50, 34, 44, 67, 30, 33, 27, 32, 34, 52, 50, 30, 0, 0, 0, 0, 0]
+    }, {
+      name: 'Người trên tuổi lao động',
+      data: [67, 55, 72, 61, 44, 78, 66, 87, 59, 69, 79, 54, 45, 66, 42, 0, 0, 0, 0, 0]
+    }],
+    options: {
+      chart: {
+        height: 350,
+        type: 'area'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'smooth'
+      },
+      xaxis: {
+        categories: [
+          "1/12/2021",
+          "2/12/2021",
+          "3/12/2021",
+          "4/12/2021",
+          "5/12/2021",
+          "6/12/2021",
+          "7/12/2021",
+          "8/12/2021",
+          "9/12/2021",
+          "10/12/2021",
+          "11/12/2021",
+          "12/12/2021",
+          "13/12/2021",
+          "14/12/2021",
+          "15/12/2021",
+          "16/12/2021",
+          "17/12/2021",
+          "18/12/2021",
+          "19/12/2021",
+          "20/12/2021"
+        ],
+      },
+      title: {
+        text: "Thống kê Người dùng mới",
+        align: "left",
+      },
+    }
+  };
+
   return (
     <div>
       <div className="dashboard">
@@ -246,6 +354,24 @@ export const DashBoard = (props) => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="main-chart">
+            {" "}
+            <Chart
+              options={state2.options}
+              series={state2.series}
+              height="100%"
+              type="donut"
+            />
+          </div>
+          <div className="main-chart">
+            {" "}
+            <Chart
+              options={state3.options}
+              series={state3.series}
+              height="100%"
+              type="area"
+            />
           </div>
         </div>
       </div>
