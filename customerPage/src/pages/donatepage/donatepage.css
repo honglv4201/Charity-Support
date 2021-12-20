@@ -6,6 +6,9 @@
   margin-top: 70px;
   display: flex;
 }
+.donate-info-option.monthly .homepage {
+  width: 30px !important;
+}
 
 .donate-info-option .homepage.session1 {
   width: 50%;
@@ -184,4 +187,35 @@ input::-webkit-inner-spin-button {
   margin-top: 30px;
   padding: 15px;
   margin-bottom: 50px;
+}
+
+/* monthly PAGE */
+.donate-info-option.monthly .donate-option__body {
+  display: flex;
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: rgba(236, 236, 236, 0.363);
+  margin-left: -50px;
+  width: fit-content;
+  padding: 30px 50px;
+}
+.donate-info-option.monthly .donate-option__body .right-pannel {
+  width: 630px;
+  margin-left: 60px;
+  padding-right: 0 !important;
+}
+.donate-info-option.monthly .donate-option__body textarea {
+  width: 100%;
+  height: 170px;
+}
+.donate-info-option.monthly .pay-btn {
+  margin-left: 350px;
+  width: 450px !important;
+}
+.donate-info-option.monthly .header-page-session h2 p {
+  margin-top: 22px;
+  opacity: 0.8;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  opacity: 0.65;
 }

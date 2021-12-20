@@ -245,6 +245,7 @@
   text-align: start;
   padding-left: 30px;
 }
+
 .details .recentOrders table.statement tr td {
   padding: 30px !important;
 }
@@ -292,6 +293,63 @@
   width: 80px !important;
   padding: 0px !important;
 }
+.details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(1) {
+  width: 260px !important;
+}
+.details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(1) img {
+  margin: 14px 0;
+  border-radius: 8px;
+}
+.details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(2) {
+  width: 250px;
+  line-height: 1.8;
+}
+.details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(3) {
+  width: 90px;
+  text-align: center;
+}
+.details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(4) {
+  width: 200px;
+}
+.details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(5) {
+  width: 100px;
+}
+.details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(6) {
+  width: 160px;
+}
+.details .recentOrders table.dashboard-chuongtrinh tr td:nth-child(7) {
+  width: 80px;
+}
+/* monthly */
+.details .recentOrders table.monthly tr td:nth-child(7) {
+  width: 110px !important;
+  text-align: center;
+}
+.details .recentOrders table.monthly tr td:nth-child(6) {
+  width: 180px !important;
+  text-align: center;
+}
+.details .recentOrders table.monthly tr td:nth-child(8) {
+  width: 210px !important;
+  text-align: center;
+}
+/* volunteer */
+.details .recentOrders table.volunteer tr td:nth-child(5) {
+  width: 260px !important;
+}
+.details .recentOrders table.volunteer tr td:nth-child(6) {
+  width: 120px !important;
+  text-align: center;
+}
+.details .recentOrders table.volunteer tr td:nth-child(7) {
+  width: 160px !important;
+  text-align: center;
+}
+.details .recentOrders table.volunteer tr td:nth-child(8) {
+  width: 110px !important;
+  text-align: center;
+}
+/* other */
 .status.once {
   padding: 4px 10px;
   background: #1795ce;

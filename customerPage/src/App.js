@@ -29,6 +29,13 @@ import { ListPost5 } from "./pages/post/listpost/listPostOwner/ListPost5";
 import { ListPost6 } from "./pages/post/listpost/listPostOwner/ListPost6";
 import { AnalysicResult } from "./pages/analysic/AnalysicResult";
 import { DashBoard } from "./pages/dashboard/DashBoard";
+import { DashBoardUser } from "./pages/dashboard/DashBoardUser";
+import { DashBoardChuongTrinh } from "./pages/dashboard/DashBoardChuongTrinh";
+import { DashBoardMonthly } from "./pages/dashboard/DashBoardMonthly";
+import { DashBoardVolunteer } from "./pages/dashboard/DashBoardVolunteer";
+import { VolunteerSuccessPage } from "./pages/homePage/VolunteerSuccessPage";
+import { DonateMonthlyPage } from "./pages/donatepage/DonateMonthlyPage";
+import { RegisterOrgnizationPage } from "./pages/homePage/RegisterOrgnizationPage";
 
 function App() {
   return (
@@ -36,6 +43,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/donate" element={<DonatePage />} />
+        <Route path="/donate-monthly" element={<DonateMonthlyPage />} />
         <Route path="/paying" element={<PayPage />} />
         <Route path="/paying-complete" element={<PayCompletePage />} />
         <Route path="/login" element={<Login />} />
@@ -43,6 +51,11 @@ function App() {
 
         {/* link  */}
         <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/volunteer/success" element={<VolunteerSuccessPage />} />
+        <Route
+          path="/register-orginization"
+          element={<RegisterOrgnizationPage />}
+        />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/analysic" element={<AnaLysicItem />} />
         <Route path="/user" element={<AnalysicUser />} />
@@ -71,6 +84,13 @@ function App() {
 
         {/* dash board */}
         <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/dashboard/donator" element={<DashBoardUser />} />
+        <Route
+          path="/dashboard/chuongtrinh"
+          element={<DashBoardChuongTrinh />}
+        />
+        <Route path="/dashboard/monthly" element={<DashBoardMonthly />} />
+        <Route path="/dashboard/volunteer" element={<DashBoardVolunteer />} />
       </Routes>
     </div>
   );

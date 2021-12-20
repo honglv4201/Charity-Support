@@ -24,6 +24,8 @@ import { ItemHomePage } from "../../components/donateItemHomePage/ItemHomePage";
 
 // json
 import { featuredPost } from "../../assets/JsonData/featuredPost";
+import { MonthRegisterFullWidth1 } from "../../components/monthRegister/monthRegisterFullWidth1";
+import { Footer } from "../../components/footer/Footer";
 /**
  * @author
  * @function HomePage
@@ -79,34 +81,36 @@ export const HomePage = (props) => {
                 <p className="desc">
                   Chúng tôi sẽ "trao tận tay" tấm lòng nhân ái của bạn
                 </p>
-                <a href="#" className="btn-donate zoom-anim">
+                <Link to="/list" className="btn-donate zoom-anim">
                   Ủng hộ ngay
                   <i class="fas fa-caret-right"></i>
-                </a>
+                </Link>
               </div>
-              <div className="left-pannel__bottom">
-                <div className="each-item">
-                  <div className="image-icon">
-                    <img src={donateImg} alt="" />
+              <Link to="dashboard">
+                <div className="left-pannel__bottom">
+                  <div className="each-item">
+                    <div className="image-icon">
+                      <img src={donateImg} alt="" />
+                    </div>
+                    <div className="info">
+                      <div className="quantity">380</div>
+                      <div className="desc">Chương trình hoàn thành</div>
+                    </div>
                   </div>
-                  <div className="info">
-                    <div className="quantity">380</div>
-                    <div className="desc">Chương trình hoàn thành</div>
-                  </div>
-                </div>
 
-                <div className="each-item">
-                  <div className="image-icon">
-                    <img src={collectImg} alt="" />
+                  <div className="each-item">
+                    <div className="image-icon">
+                      <img src={collectImg} alt="" />
+                    </div>
+                    <div className="info">
+                      <div className="quantity">380</div>
+                      <div className="desc">Tổng số tiền</div>
+                    </div>
                   </div>
-                  <div className="info">
-                    <div className="quantity">380</div>
-                    <div className="desc">Tổng số tiền</div>
-                  </div>
-                </div>
 
-                <div className="separate-item"></div>
-              </div>
+                  <div className="separate-item"></div>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="col-6 ">
@@ -114,29 +118,31 @@ export const HomePage = (props) => {
               <div className="image">
                 <img src={homeImg} alt="" />
               </div>
-              <div className="card">
-                <div className="card-content">
-                  <div className="card__title">Số người ủng hộ</div>
-                  <div className="card__quantity">4.323</div>
-                  <div className="card__user">
-                    <div className="user-item quantity">
-                      <div className="quantity">4.5k</div>
-                    </div>
-                    <div className="user-item">
-                      <img src={homeImg} alt="" />
-                    </div>
-                    <div className="user-item">
-                      <img src={homeImg} alt="" />
-                    </div>
-                    <div className="user-item">
-                      <img src={homeImg} alt="" />
-                    </div>
-                    <div className="user-item">
-                      <img src={homeImg} alt="" />
+              <Link to="/dashboard">
+                <div className="card">
+                  <div className="card-content">
+                    <div className="card__title">Số người ủng hộ</div>
+                    <div className="card__quantity">4.323</div>
+                    <div className="card__user">
+                      <div className="user-item quantity">
+                        <div className="quantity">4.5k</div>
+                      </div>
+                      <div className="user-item">
+                        <img src={homeImg} alt="" />
+                      </div>
+                      <div className="user-item">
+                        <img src={homeImg} alt="" />
+                      </div>
+                      <div className="user-item">
+                        <img src={homeImg} alt="" />
+                      </div>
+                      <div className="user-item">
+                        <img src={homeImg} alt="" />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -178,7 +184,11 @@ export const HomePage = (props) => {
               >
                 Ủng hộ
               </Link>
-              <Link to="/post" className="btn btn-detail zoom-anim">
+              <Link
+                to="/post"
+                className="btn btn-detail zoom-anim"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Chi tiết
               </Link>
             </div>
@@ -284,6 +294,9 @@ export const HomePage = (props) => {
         pageId="100076172293257"
         appId="2805262446244406"
       />
+
+      <MonthRegisterFullWidth1 />
+      <Footer />
     </div>
   );
 };
