@@ -105,7 +105,9 @@ export const HomePage = (props) => {
                       <img src={collectImg} alt="" />
                     </div>
                     <div className="info">
-                      <div className="quantity">380</div>
+                      <div className="quantity">
+                        8.932.240.000 <span>VND</span>
+                      </div>
                       <div className="desc">Tổng số tiền</div>
                     </div>
                   </div>
@@ -124,10 +126,10 @@ export const HomePage = (props) => {
                 <div className="card">
                   <div className="card-content">
                     <div className="card__title">Số người ủng hộ</div>
-                    <div className="card__quantity">4.323</div>
+                    <div className="card__quantity">14.323</div>
                     <div className="card__user">
                       <div className="user-item quantity">
-                        <div className="quantity">4.5k</div>
+                        <div className="quantity">14.3k</div>
                       </div>
                       <div className="user-item">
                         <img src={homeImg} alt="" />

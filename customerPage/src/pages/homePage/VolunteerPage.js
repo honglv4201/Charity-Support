@@ -74,11 +74,11 @@ export const Volunteer = (props) => {
                     <input type="text" placeholder="Họ tên" />
                   </div>
                   <div className="session-input">
-                    <i class="fas fa-user-alt"></i>
+                    <i class="far fa-envelope"></i>
                     <input type="email" placeholder="Email" />
                   </div>
                   <div className="session-input">
-                    <i class="fas fa-user-alt"></i>
+                    <i class="fas fa-phone"></i>
                     <input type="number" placeholder="Số điện thoại" />
                   </div>
                   <div className="session-input">

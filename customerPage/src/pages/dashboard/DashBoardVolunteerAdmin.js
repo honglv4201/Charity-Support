@@ -265,7 +265,7 @@ export const DashBoardVolunteerAdmin = (props) => {
                             </div>
 
                             <Select
-                              placeholder="Chọn hạng"
+                              placeholder="Phân loại"
                               className="honghong type"
                               options={optionType}
                               onChange={handleType}
