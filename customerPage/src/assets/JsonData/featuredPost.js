@@ -34,7 +34,7 @@ export const featuredPost = [
     desc: "Hỗ trợ bệnh nhân tại các bệnh viện tại thành phố Hồ Chí Minh",
     time: 1,
     goal: "300 Triệu Đồng",
-    raised: "225 Triệu Đồng",
+    raised: "95 Triệu Đồng",
     owner: 1, // 1 is hội covid Việt Nam
     type: "Người khuyết tật",
   },

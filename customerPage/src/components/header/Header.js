@@ -10,6 +10,9 @@ import userMenu from "../../assets/JsonData/user_menus.json";
  * @author
  * @function Header
  **/
+// toast
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Header = (props) => {
   const ref = useRef(null);
@@ -26,6 +29,19 @@ export const Header = (props) => {
   //     lastScrollTop = scrollTop;
   //   }
   // });
+
+  const errorDownload = () => {
+    toast.error("🦄 Wow so easy!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
   return (
     <div>
       <div ref={ref} className="header__wrapper ">
