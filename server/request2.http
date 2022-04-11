@@ -1,0 +1,16 @@
+// THIS PAGE TO POST VALUE FOR POST CHARITY
+
+
+POST http://localhost:4001/api/post/create
+Content-Type: application/json
+
+{
+    "image": "https://gocnhin.com.vn/cdn1/2020/10/ho-tong-thuy-tien-di-mien-tay-tu-thien-cong-vinh-bi-nguoi-dan-goi-la-dan-trom-cho-con-do-a26-4765485.png",
+    "title": "Từ thiện miền Trung",
+    "timeRemain": 5,
+    "target": "32000000",
+    "donated": "615000000",
+    "organization": "62515ce043423ccf02465f89",
+    "typecharity": "62514cdb8e9dda046cc90c4c"
+}
+

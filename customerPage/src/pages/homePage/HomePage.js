@@ -74,7 +74,7 @@ export const HomePage = (props) => {
       <Header link="home" />
 
       {/* Start : HomePage Top */}
-      <div className="home__top">
+      <div className="home__top mt-10">
         <div className="row">
           <div className="col-6">
             <div className="home__top-leftpannel">

@@ -110,3 +110,48 @@
   padding: 25px;
   border-radius: 10px;
 }
+
+/* spin */
+.spin-loading {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  padding: 0;
+  height: 20px;
+  background: transparent;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  border-right-color: transparent;
+  left: 14px;
+  animation: spin 1s infinite linear;
+}
+.spin-loading.hide {
+  display: none;
+}
+.icon-complete {
+  position: absolute;
+  display: inline-block;
+  left: 18px;
+  font-size: 1.8rem;
+  color: rgb(0, 193, 0);
+  animation: spinAndZoom 0.4s linear;
+}
+.icon-complete.hide {
+  display: none;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinAndZoom {
+  from {
+    transform: rotate(0deg) scale(0.5);
+  }
+  to {
+    transform: rotate(360deg) scale(1.2);
+  }
+}

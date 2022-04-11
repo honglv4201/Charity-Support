@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ItemHomePage } from "../../../components/donateItemHomePage/ItemHomePage";
 import { Header } from "../../../components/header/Header";
@@ -9,12 +9,23 @@ import "./listpostall.css";
 import { featuredPost } from "../../../assets/JsonData/featuredPost";
 import { MonthRegisterFullWidth1 } from "../../../components/monthRegister/monthRegisterFullWidth1";
 import { Footer } from "../../../components/footer/Footer";
+import { PostContext } from "../../../contexts/PostContext";
+import ItemHomePageNode from "../../../components/donateItemHomePage/ItemHomePageNode";
 /**
  * @author
  * @function ListPostAll
  **/
 
 export const ListPostAll = (props) => {
+  const {
+    postState: { listPost, isLoading },
+    getPost,
+  } = useContext(PostContext);
+
+  useEffect(() => {
+    getPost();
+  }, []);
+
   return (
     <div>
       <Header link="list" />
@@ -134,11 +145,14 @@ export const ListPostAll = (props) => {
           {/* right pannel */}
           <div className="right">
             <div className="list-donate-itemss">
+              {listPost.map((item, ind) => (
+                <ItemHomePageNode {...item} />
+              ))}
               {featuredPost.map((item, ind) => (
                 <ItemHomePage {...item} />
               ))}
               {featuredPost.map((item, ind) => (
-                <ItemHomePage {...item} />
+                <ItemHomePage {...item} key={ind} />
               ))}
             </div>
           </div>

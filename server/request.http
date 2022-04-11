@@ -1,0 +1,95 @@
+POST http://localhost:4001/api/auth/register
+Content-Type: application/json
+
+{
+    "fullname" : "Lam Hong" , 
+    "email" : "vanhong@gmail.com", 
+    "password" : "lamvanhong" , 
+    "phoneNumber" : "0396432406"
+}
+
+###
+
+POST http://localhost:4001/api/auth/login
+Content-Type: application/json
+
+{
+    "email" : "vanhong@gmail.com", 
+    "password" : "lamvanhong" 
+}
+
+###
+
+POST http://localhost:4001/api/auth/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjRkZGVhMmFkMmQ0YWVlNjcyN2M5MTAiLCJpYXQiOjE2NDkyODQ1NTF9.Piifufui2vSK9voXa3eRLhoL2t8OG1fnHG18NqXRyKU
+
+{
+    
+}
+###
+
+PUT http://localhost:4001/api/auth/updateprofile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MjRkZGVhMmFkMmQ0YWVlNjcyN2M5MTAiLCJpYXQiOjE2NDk0NzIwNzZ9.wxlchaCRSA_yG45Z-WmndeVsT6jK1GWhWu5sJH91WI0
+
+
+{
+    "fullname" : "Lam Hongxxasdf" , 
+    "email" : "vanhong@gmail.com", 
+    "phoneNumber" : "0396432406"
+}
+
+//TYpe
+###
+POST http://localhost:4001/api/type
+Content-Type: application/json
+
+{
+    "name" :"Covid 19"
+}
+
+// ORGANIZATION
+###
+POST http://localhost:4001/api/organization
+Content-Type: application/json
+
+{
+    "name" :"Hội Trẻ Em Việt Nam"
+}
+//POST
+###
+POST http://localhost:4001/api/post/create
+Content-Type: application/json
+
+{
+    "image": "https://chuthapdophutho.org.vn/uploads/news/2018_08/t1-4mau-1533263088.jpg",
+      "title": "Hỗ trợ người già neo đơn",
+    "timeRemain": 5,
+    "target": "10000000",
+    "donated": "75000000",
+    "organization": "62515ce043423ccf02465f89",
+    "type": "62514cc58e9dda046cc90c47"
+}
+###
+POST http://localhost:4001/api/post/create
+Content-Type: application/json
+
+{
+    "image": "https://cand.com.vn/Files/Image/nguyenbinh/2017/12/03/thumb_660_2a9c38c9-135f-4db5-8dbc-b5b9cab53249.jpg",
+      "title": "Hỗ trợ người già neo đơn",
+    "timeRemain": 5,
+    "target": "10000000",
+    "donated": "75000000",
+    "organization": "62515ce043423ccf02465f89",
+    "typecharity": "62514cdb8e9dda046cc90c4c"
+}
+
+###
+GET http://localhost:4001/api/post
+
+
+// get organization
+###
+GET http://localhost:4001/api/type
+###
+GET http://localhost:4001/api/organization

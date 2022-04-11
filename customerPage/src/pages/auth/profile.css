@@ -63,17 +63,24 @@
   display: flex;
   flex-wrap: wrap;
 }
-.profile-page .account-info .session-input {
+.profile-page .account-info .session-input,
+.profile-page .session-input.area {
   font-size: 1.6rem;
   margin-right: 10px;
   width: 450px;
 }
-.profile-page .account-info .session-input .title {
+.profile-page .session-input.area {
+  width: 100%;
+  display: block;
+}
+.profile-page .account-info .session-input .title,
+.profile-page .session-input.area .title {
   margin-bottom: 10px;
   font-weight: 600;
   opacity: 0.8;
 }
-.profile-page .account-info .session-input input {
+.profile-page .account-info .session-input input,
+.profile-page .session-input.area input {
   outline: none;
   border: 2px solid rgba(223, 223, 223, 0.541);
   padding: 14px 30px;
@@ -82,8 +89,8 @@
   font-size: 1.6rem;
   width: 400px;
 }
-.profile-page .account-info .session-input textarea {
-  width: 800px;
+.profile-page .session-input textarea {
+  width: 860px;
   border: 2px solid rgba(223, 223, 223, 0.541);
   height: 120px;
   border-radius: 10px;
@@ -91,24 +98,40 @@
   font-size: 1.6rem;
   outline: none;
 }
-.profile-page .account-info .button-wrap {
-  margin-top: 180px;
+@media (max-width: 1400px) {
+  .profile-page .session-input textarea {
+    width: 400px;
+  }
 }
-.profile-page .account-info .button-wrap button {
+.profile-page .button-wrap {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.profile-page .button-wrap button {
   padding: 14px 44px;
   border-radius: 8px;
   margin-right: 20px;
   font-size: 1.6rem;
   font-weight: 600;
 }
-.profile-page .account-info .button-wrap button:hover {
+.profile-page .button-wrap button:hover {
   opacity: 0.8;
 }
-.profile-page .account-info .button-wrap .btn-update {
+.profile-page .button-wrap .btn-update {
+  background-color: rgb(221, 221, 221);
+  position: relative;
+}
+.profile-page .button-wrap .btn-update.active {
   background-color: var(--third-color-green);
   color: white;
 }
-.profile-page .account-info .button-wrap .btn-cancle:hover {
+.profile-page .button-wrap .btn-update .txt.active {
+  opacity: 1;
+}
+.profile-page .button-wrap .btn-update .txt {
+  opacity: 0.6;
+}
+.profile-page .button-wrap .btn-cancle:hover {
   background-color: rgb(221, 221, 221);
 }
 

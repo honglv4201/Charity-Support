@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import logoImg from "../../assets/img/logo/charity icon.png";
 import { Link } from "react-router-dom";
 import "./header.css";
@@ -13,6 +13,7 @@ import userMenu from "../../assets/JsonData/user_menus.json";
 // toast
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const Header = (props) => {
   const ref = useRef(null);
@@ -41,6 +42,12 @@ export const Header = (props) => {
       progress: undefined,
     });
   };
+
+  // set login state
+  const {
+    logOut,
+    authState: { isAuthenticated, user },
+  } = useContext(AuthContext);
 
   return (
     <div>
@@ -99,7 +106,7 @@ export const Header = (props) => {
         </div>
         <div
           className={
-            localStorage.getItem("mykey") === "2"
+            isAuthenticated
               ? "header__account flex-align"
               : "header__account hide flex-align"
           }
@@ -116,7 +123,7 @@ export const Header = (props) => {
             <div className="avatar">
               <img src={avatarImg} alt="avatar" />
             </div>
-            <div className="username">Lam Hong</div>
+            <div className="username">{user ? user.fullname : ""}</div>
             <div className="toggle-down">
               <i class="fas fa-sort-down"></i>
             </div>
@@ -128,8 +135,9 @@ export const Header = (props) => {
                     onClick={
                       item.link === "/"
                         ? () => {
-                            localStorage.removeItem("mykey");
-                            window.location.reload();
+                            // localStorage.removeItem("mykey");
+                            // window.location.reload();
+                            logOut();
                           }
                         : ""
                     }
@@ -144,7 +152,7 @@ export const Header = (props) => {
         </div>
         <div
           className={
-            localStorage.getItem("mykey") !== "2"
+            !isAuthenticated
               ? "header__account-login  flex-align"
               : "header__account-login hide  flex-align"
           }

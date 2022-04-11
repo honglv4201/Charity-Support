@@ -83,7 +83,8 @@
 }
 
 /* login button */
-.login__bottom .auth-form > a {
+.login__bottom .auth-form > a,
+.login__bottom .auth-form .btn-login {
   border: 2px solid transparent;
   background-color: var(--third-color-green);
   color: white;
@@ -95,7 +96,8 @@
   width: 400px;
   margin-top: 20px;
 }
-.login__bottom .auth-form > a:hover {
+.login__bottom .auth-form > a:hover,
+.login__bottom .auth-form .btn-login:hover {
   background-color: var(--third-color-green-hover);
 }
 .login__bottom a.gg {
@@ -155,6 +157,7 @@
   margin-top: 10px;
   border-top: 3px solid rgba(240, 240, 240, 0.377);
   padding-top: 15px;
+  margin-bottom: 100px;
 }
 
 .login__bottom .change-auth span {
@@ -163,4 +166,28 @@
 .login__bottom .change-auth a {
   color: var(--third-color-green);
   font-weight: 600;
+}
+
+/* err */
+.login__bottom .auth-form .err-message {
+  display: flex;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: rgb(255, 247, 247);
+  border-radius: 10px;
+  border: 1px solid rgb(255, 224, 224);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.login__bottom .auth-form .err-message.for-signup {
+  width: 95%;
+}
+.login__bottom .auth-form .err-message.border {
+  border: 1px solid red;
+}
+.login__bottom .auth-form .err-message i {
+  color: red;
+  flex: 0;
+  margin-right: 10%;
+  margin-left: 10px;
 }

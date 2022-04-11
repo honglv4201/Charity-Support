@@ -1,19 +1,62 @@
-import React from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./auth.css";
 import loginGif from "../../assets/img/component/loginbackground.gif";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import appleImg from "../../assets/img/auth/apple.png";
 import facebookImg from "../../assets/img/auth/facebook.png";
 import googleImg from "../../assets/img/auth/google.png";
+import { AuthContext } from "../../contexts/AuthContext";
 /**
  * @author
  * @function Login
  **/
 
 export const Login = (props) => {
+  const {
+    loginUser,
+    authState: { isAuthenticated, user },
+  } = useContext(AuthContext);
+
+  const [loginForm, setLoginForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [err, setErr] = useState();
+  const errRef = useRef();
+
+  const handleOnChangeLogin = (e) => {
+    setLoginForm({
+      ...loginForm,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // handle Login
   const handleLogin = () => {
     localStorage.setItem("mykey", "2");
   };
+
+  const handleLogin_NODE = async (e) => {
+    e.preventDefault();
+    const data = await loginUser(loginForm);
+    setErr(null);
+    errRef.current?.classList.toggle("border");
+    console.log("data", data);
+    if (data.error) {
+      setErr(data.data.message);
+    }
+    setTimeout(() => {
+      setErr(null);
+      errRef.current?.classList.toggle("border");
+    }, 3000);
+  };
+
+  // return components
+
+  if (isAuthenticated) {
+    return <Navigate to="/" />;
+  }
   return (
     <div className="login">
       <div className="login__above">
@@ -25,16 +68,26 @@ export const Login = (props) => {
         <div className="content__wrapper">
           <div className="content__body">
             <h3>Chào mừng trở lại</h3>
-            <div className="auth-form">
+            <form className="auth-form">
+              {err && (
+                <div className="err-message text-red-400" ref={errRef}>
+                  <i class="fa-solid fa-xmark"></i> {err}
+                </div>
+              )}
               <input
                 type="text"
                 placeholder="Nhập email"
                 className="large-custom-input"
+                name="email"
+                onChange={handleOnChangeLogin}
               />
+
               <input
                 type="password"
                 placeholder="Mật khẩu"
                 className="large-custom-input"
+                name="password"
+                onChange={handleOnChangeLogin}
               />
               <div className="option-login">
                 <div className="remember-me__wrapper">
@@ -52,16 +105,13 @@ export const Login = (props) => {
                 <Link to="/forgetpassword">Quên mật khẩu?</Link>
               </div>
 
-              <Link
-                to={
-                  localStorage.getItem("loginto") === "dashboard"
-                    ? "/dashboard"
-                    : "/"
-                }
-                onClick={handleLogin}
+              <button
+                type="submit"
+                className="btn-login"
+                onClick={handleLogin_NODE}
               >
                 Đăng nhập
-              </Link>
+              </button>
               <div className="social-login">
                 <Link
                   to={
@@ -94,7 +144,7 @@ export const Login = (props) => {
                 <span>Chưa có tài khoản? </span>
                 <Link to="/signup">Đăng ký</Link>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
