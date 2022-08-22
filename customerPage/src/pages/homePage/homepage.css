@@ -13,6 +13,47 @@
 
 .home__top-leftpannel {
 }
+
+@media (max-width: 1400px) {
+  .left-pannel__bottom {
+    margin-left: 0 !important;
+    display: flex;
+    flex-direction: column;
+    display: none !important;
+  }
+  .home__top-rightpannel {
+    margin-top: -40px !important;
+  }
+  .home__top-rightpannel .image {
+    width: 100% !important;
+  }
+  .home__top-rightpannel .image img {
+    width: 100% !important;
+  }
+  .home__top-rightpannel .card {
+    top: 10px !important;
+    left: 140px !important;
+  }
+  .session1 .post .image {
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+  .session1 .post .post-left::before {
+    left: 0 !important;
+  }
+  .session1 .post {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px !important;
+    width: screen !important;
+  }
+  .session1 .post-right {
+    padding: 0px !important;
+  }
+  .session2 {
+    padding: 0px !important;
+  }
+}
 .left-panel__above {
   display: grid;
   place-content: center;

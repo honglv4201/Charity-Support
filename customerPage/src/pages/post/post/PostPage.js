@@ -10,7 +10,6 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 // css
 import "./postpage.css";
-import postImg from "../../../assets/img/post/post1.jpg";
 import { RecentDonates } from "../../../assets/JsonData/RecentDonates";
 import { Link } from "react-router-dom";
 

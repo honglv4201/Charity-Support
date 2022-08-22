@@ -110,7 +110,15 @@
 
 /* SMALL SCREEN */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .col-6 {
+    width: 100%;
+    margin: 0 16px;
+  }
   .col-sm-1 {
     width: 8.33%;
   }

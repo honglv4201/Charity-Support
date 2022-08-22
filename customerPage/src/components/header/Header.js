@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import logoImg from "../../assets/img/logo/charity icon.png";
-import { Link } from "react-router-dom";
-import "./header.css";
+import { Link, useLocation } from "react-router-dom";
+import "./header.scss";
 import avatarImg from "../../assets/img/avatar.png";
 import chinhphuImg from "../../assets/img/chinhphu.png";
 
@@ -13,6 +13,7 @@ import userMenu from "../../assets/JsonData/user_menus.json";
 // toast
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useClickOutSide from "../../hooks/useClickOutSide";
 
 export const Header = (props) => {
   const ref = useRef(null);
@@ -30,27 +31,24 @@ export const Header = (props) => {
   //   }
   // });
 
-  const errorDownload = () => {
-    toast.error("🦄 Wow so easy!", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+  const handleExpand = (e) => {
+    setShow(true);
   };
+
+  const { nodeRef, show, setShow } = useClickOutSide();
+
+  const { pathname } = useLocation();
+  console.log("🚀 ~ file: Header.js ~ line 42 ~ Header ~ pathname", pathname);
 
   return (
     <div>
       <div ref={ref} className="header__wrapper ">
-        <img
+        {/* <img
           className="chinhphu"
           title="Tổ chức được hỗ trợ bởi chính phủ"
           src={chinhphuImg}
           alt=""
-        />{" "}
+        />{" "} */}
         <Link
           to="/"
           className={
@@ -71,7 +69,7 @@ export const Header = (props) => {
         >
           <ul>
             <li className={props.link === "list" ? "active" : ""}>
-              <Link to="/list">Ủng Hộ</Link>
+              <Link to="/listpost/all">Ủng Hộ</Link>
             </li>
             <li className={props.link === "volunteer" ? "active" : ""}>
               <Link to="/volunteer"> Tình nguyện viên</Link>
@@ -141,6 +139,55 @@ export const Header = (props) => {
               ))}
             </div>
           </div>
+        </div>
+        <div className="expand-icon" onClick={handleExpand}>
+          <i class="fa-solid fa-bars" ref={nodeRef}></i>
+          {show && (
+            <div className="modal-expand">
+              <div className="overlay"></div>
+              <div
+                className="modal-expand__content"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Link
+                  to="/login"
+                  onClick={() => {
+                    localStorage.setItem("loginto", "home");
+                  }}
+                  className="btn-auth login"
+                >
+                  Đăng nhập
+                </Link>
+                <Link
+                  to="signup"
+                  onClick={() => {
+                    localStorage.setItem("loginto", "home");
+                  }}
+                  className="btn-auth signup"
+                >
+                  Đăng ký
+                </Link>
+
+                <ul className="list-nav">
+                  <li className={pathname === "/" ? "active" : ""}>
+                    <Link to="/">Trang chủ</Link>
+                  </li>
+                  <li className={pathname === "/listpost/all" ? "active" : ""}>
+                    <Link to="/listpost/all">Ủng Hộ</Link>
+                  </li>
+                  <li className={props.link === "volunteer" ? "active" : ""}>
+                    <Link to="/volunteer"> Tình nguyện viên</Link>
+                  </li>
+                  <li className={props.link === "faq" ? "active" : ""}>
+                    <Link to="/faq">Trợ giúp</Link>
+                  </li>
+                  <li className={props.link === "dashboard" ? "active" : ""}>
+                    <Link to="/dashboard">Thống kê</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
         </div>
         <div
           className={

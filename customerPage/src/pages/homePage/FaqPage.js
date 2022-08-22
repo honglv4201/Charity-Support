@@ -11,7 +11,6 @@ import "./faqpage.css";
 export const FaqPage = (props) => {
   const refTag = useRef(null);
   useEffect(() => {
-    console.log("hongggggggg");
     console.log(refTag.current);
     console.log(refTag.current.props);
   }, []);

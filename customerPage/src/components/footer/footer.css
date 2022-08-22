@@ -18,6 +18,15 @@ footer .wave {
   background: url(../../assets/img/wave.png);
   background-size: 1000px 100px;
 }
+
+@media (max-width: 500px) {
+  .main-footer .menu {
+    display: flex;
+    flex-direction: column !important;
+    gap: 20px;
+    margin-top: 20px;
+  }
+}
 footer .wave#wave1 {
   z-index: 1000;
   opacity: 1;

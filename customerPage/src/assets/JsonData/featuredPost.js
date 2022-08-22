@@ -15,8 +15,8 @@ export const featuredPost = [
     time: 7, // đơn vị day
     goal: "50 Triệu Đồng",
     raised: "34 Triệu Đồng",
-    owner: 3, // 1 is hội chữ thập đỏ
-    type: "Covid 19",
+    owner: "chuthapdo", // 1 is hội chữ thập đỏ
+    type: "covid",
   },
   {
     image: post2Img,
@@ -25,8 +25,8 @@ export const featuredPost = [
     time: 15,
     goal: "100 Triệu Đồng",
     raised: "78 Triệu Đồng",
-    owner: 4, // 2 is quỹ tình thương hcm
-    type: "Covid 19",
+    owner: "tinhthuonghcm", // 2 is quỹ tình thương hcm
+    type: "covid",
   },
   {
     image: post3Img,
@@ -35,8 +35,8 @@ export const featuredPost = [
     time: 1,
     goal: "300 Triệu Đồng",
     raised: "95 Triệu Đồng",
-    owner: 1, // 1 is hội covid Việt Nam
-    type: "Người khuyết tật",
+    owner: "bongsenvang", // 1 is hội covid Việt Nam
+    type: "disability",
   },
   {
     image: post4Img,
@@ -45,8 +45,8 @@ export const featuredPost = [
     time: 25,
     goal: "30 Triệu Đồng",
     raised: "27 Triệu Đồng",
-    owner: 2, // 3 is hội chữ thập đỏ
-    type: "Người già",
+    owner: "chuthapdo", // 3 is hội chữ thập đỏ
+    type: "oldpeople",
   },
   {
     image: post5Img,
@@ -55,8 +55,8 @@ export const featuredPost = [
     time: 20,
     goal: "35 Triệu Đồng",
     raised: "27 Triệu Đồng",
-    owner: 5, // 3 is hội chữ thập đỏ
-    type: "Trẻ em",
+    owner: "treemvietnam", // 3 is hội chữ thập đỏ
+    type: "children",
   },
   {
     image: post6Img,
@@ -65,8 +65,8 @@ export const featuredPost = [
     time: 10,
     goal: "1 Tỷ Đồng",
     raised: "768 Triệu Đồng",
-    owner: 4, // 3 is hội chữ thập đỏ
-    type: "Covid 19",
+    owner: "hoicovidhcm", // 3 is hội chữ thập đỏ
+    type: "covid",
   },
   {
     image: post7Img,
@@ -75,7 +75,7 @@ export const featuredPost = [
     time: 30,
     goal: "100 Tỷ Đồng",
     raised: "80 Tỷ Đồng",
-    owner: 6, // 3 is hội chữ thập đỏ
-    type: "Người nghèo",
+    owner: "chuthapdo", // 3 is hội chữ thập đỏ
+    type: "poorpeople",
   },
 ];

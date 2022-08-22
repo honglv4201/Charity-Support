@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./dashboard.css";
 import { DashBoardTab } from "./DashBoardTab";
 import avatarImg from "../../assets/img/avatar.png";
@@ -9,6 +9,7 @@ import Chart from "react-apexcharts";
 // img
 import coinImg from "../../assets/img/coin.png";
 import { DashBoardTopNav } from "./DashBoardTopNav";
+import { NoSupport } from "../homePage/NoSupport";
 
 /**
  * @author
@@ -181,6 +182,9 @@ export const DashBoard = (props) => {
       },
     },
   };
+  if (window.innerWidth < 1200) {
+    return <NoSupport />;
+  }
 
   return (
     <div>
@@ -480,7 +484,9 @@ export const DashBoard = (props) => {
                       />
                     </div>
                     <div className="info">
-                      <div className="name">Hội thiện nguyện trái tim yêu thương</div>
+                      <div className="name">
+                        Hội thiện nguyện trái tim yêu thương
+                      </div>
                       <div className="type">Cần Thơ</div>
                     </div>
                     <div className="money">

@@ -17,6 +17,12 @@
 .list-donate-itemss .donate-item img {
   width: 100%;
 }
+.list-donate-itemss .tag-items {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
 
 .list-donate-itemss .pop-info {
   margin: 0px 0 15px 10px;
@@ -67,4 +73,40 @@
 }
 .list-donate-itemss .donate-item__body {
   padding: 25px;
+}
+.modal-expand {
+  width: screen;
+  height: screen;
+}
+.modal-expand .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.265);
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+}
+.modal-expand__content {
+  background: white;
+  position: fixed;
+  inset: 0;
+  left: 100px;
+  z-index: 10001;
+}
+@media (min-width: 600px) {
+  .modal-expand {
+    display: none;
+  }
+}
+.modal-expand__content .btn-auth {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  margin-left: 50px;
+  gap: 20px !important;
+  text-align: center;
+}
+.modal-expand__content .btn-auth.signup {
+  margin-top: 20px !important;
 }
