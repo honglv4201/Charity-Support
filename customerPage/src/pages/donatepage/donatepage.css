@@ -219,3 +219,32 @@ input::-webkit-inner-spin-button {
   color: var(--text-color);
   opacity: 0.65;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+}
+@media screen and (max-width: 767px) {
+  .post-page__body .left {
+    padding: 10px 20px;
+  }
+  .post-page__body .left h6 {
+    padding: 8px 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .donate-info-option {
+    flex-direction: column;
+  }
+  .header-page-session {
+    width: auto;
+  }
+  .header-page-session {
+    margin-left: 100px;
+  }
+  .option-money .selected-radio {
+    flex-direction: column-reverse;
+  }
+  .option-money .selected-radio input,
+  label {
+    width: 200px !important;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./dashboard.css";
 import { DashBoardTab } from "./DashBoardTab";
@@ -182,11 +182,32 @@ export const DashBoard = (props) => {
       },
     },
   };
-  if (window.innerWidth < 1200) {
-    return <NoSupport />;
-  }
 
-  return (
+  const navigate = useNavigate();
+
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 1500) {
+      setIsMobile(true);
+    }
+  }, []);
+  useEffect(() => {
+    const handleWindowSizeChange = () => {
+      if (window.innerWidth < 1500) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  return isMobile ? (
+    <NoSupport />
+  ) : (
     <div>
       <div className="dashboard">
         <div className="dashboard__left">

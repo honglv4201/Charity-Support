@@ -70,7 +70,7 @@ export const PostPage = (props) => {
           </div>
           <div className="slider">
             <SimpleImageSlider
-              width={1000}
+              width={"80vw"}
               height={404}
               images={images}
               showBullets={true}

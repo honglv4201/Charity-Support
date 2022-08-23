@@ -3,6 +3,7 @@ import { Header } from "../../components/header/Header";
 
 import "./faqpage.css";
 import "./nosupport.scss";
+import nosupportImg from "../../assets/img/screen.jpeg";
 
 /**
  * @author
@@ -16,14 +17,12 @@ export const NoSupport = (props) => {
 
       <div className="nosupport__body">
         <div className="nosupport__img">
-          <img src="../../assets/img/month2.png" alt="canload" />
+          <img src={nosupportImg} alt="canload" />
         </div>
-        <div className="nosupport__title">
-          Page này không hỗ trợ cho điện thoại
-        </div>
+        <div className="nosupport__title">Page này chỉ hỗ trợ máy tính</div>
         <div className="nosupport__desc">
           Vui lòng xem trên thiết bị laptop/pc để có thể xem được số liệu thống
-          kê một cách đầy đủ. Cảm ơn bạn
+          kê một cách đầy đủ. Cảm ơn bạn :3
         </div>
       </div>
     </React.Fragment>
