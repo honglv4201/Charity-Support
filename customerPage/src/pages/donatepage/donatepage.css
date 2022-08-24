@@ -41,6 +41,8 @@
   text-align: center;
   font-size: 3.2rem;
   opacity: 0.95;
+  display: block;
+  width: 300px !important;
   color: var(--third-color-green);
 }
 .header-page-session > .desc {
@@ -220,8 +222,6 @@ input::-webkit-inner-spin-button {
   opacity: 0.65;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-}
 @media screen and (max-width: 767px) {
   .post-page__body .left {
     padding: 10px 20px;
@@ -237,14 +237,78 @@ input::-webkit-inner-spin-button {
   .header-page-session {
     width: auto;
   }
-  .header-page-session {
-    margin-left: 100px;
-  }
+
   .option-money .selected-radio {
     flex-direction: column-reverse;
   }
   .option-money .selected-radio input,
   label {
     width: 200px !important;
+  }
+  .header-page-session {
+    margin-right: 0;
+  }
+  .donate-info-option .input-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .pay-btn {
+    max-width: 70vw;
+    width: auto !important;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+  .header-page-session .title > h2 {
+    width: fit-content;
+    font-size: 2.4rem;
+  }
+  .donate-option__body {
+    margin-left: 30px;
+    margin-right: auto;
+    width: auto;
+  }
+  .donate-info-option .name-input input {
+    width: 80vw;
+  }
+  .donate-info-option input {
+    width: 80vw;
+  }
+  .donate-info-option .input-message textarea {
+    width: 70vw;
+  }
+  .donate-info-option .new-update .image {
+    width: 80vw !important;
+  }
+  .header-page-session img {
+    display: none;
+  }
+  .donate-option__body .title-session {
+    line-height: 1.5;
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+  .new-update .post.post-column {
+    align-items: center;
+    width: 100vw;
+    padding-left: 10px;
+  }
+  .new-update .post .post-left {
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .donate-option__body {
+    margin-left: 100px;
+    margin-right: auto;
+    width: auto;
+  }
+  .donate-info-option .new-update .image {
+    width: 50vw !important;
+  }
+  .new-update .post.post-column {
+    padding-left: 150px;
   }
 }

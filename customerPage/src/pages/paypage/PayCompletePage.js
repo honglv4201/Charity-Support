@@ -17,8 +17,10 @@ export const PayCompletePage = (props) => {
         </div>
         <div className="title">Đã hoàn tất việc đóng góp</div>
         <div className="desc">
-          Chúng tôi chân thành cảm ơn tấm lòng của bạn. <br /> Hãy theo dõi sự
-          đóng góp của bạn trên website của chúng tôi
+          Chúng tôi chân thành cảm ơn tấm lòng của bạn. <br />{" "}
+          <span>
+            Hãy theo dõi sự đóng góp của bạn trên website của chúng tôi
+          </span>
         </div>
         <Link to="/analysic">Theo dõi chương trình này</Link>
       </div>

@@ -43,3 +43,21 @@
 .paycomplete__body a:active {
   opacity: 0.8;
 }
+@media (max-width: 800px) {
+  .payheader__status-bar {
+    display: none;
+  }
+  .payheader__desc {
+    display: none;
+  }
+  .paycomplete__body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .paycomplete__body .title {
+    line-height: 1.5;
+  }
+  .paycomplete__body .desc > span {
+    display: none;
+  }
+}

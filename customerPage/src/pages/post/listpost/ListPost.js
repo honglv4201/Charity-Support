@@ -7,16 +7,17 @@ import "./listpostall.scss";
 //  json
 import { featuredPost } from "../../../assets/JsonData/featuredPost";
 import LeftMenuType from "./LeftMenuType";
+import { useDebounce } from "../../../hooks/useDebounce";
 /**
  * @author
  * @function ListPostCovid
  **/
-const ListPostHeader = () => {
+const ListPostHeader = ({ setQuery }) => {
   return (
     <div className="listpost__header">
       <h2 className="title">Tìm kiếm</h2>
       <div className="input-search">
-        <input type="text" />
+        <input onChange={(e) => setQuery(e.target.value)} type="text" />
         <Link to="/">
           {" "}
           <div className="search-btn">Tìm kiếm</div>
@@ -37,16 +38,27 @@ export const ListPost = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setIsLoading(true);
-    let time = Math.random() * 2000;
+    let time = Math.random() * 2000 + 3000;
     setTimeout(() => {
       setIsLoading(false);
     }, time);
   }, [pathname]);
+  const [query, setQuery] = useState("");
+
+  const value = useDebounce(query, 500);
+
+  useEffect(() => {
+    setIsLoading(true);
+    let time = Math.random() * 2000 + 500;
+    setTimeout(() => {
+      setIsLoading(false);
+    }, time);
+  }, [value]);
   return (
     <div>
       <Header link="list" />
       <div className="listpost listpostall">
-        <ListPostHeader />
+        <ListPostHeader setQuery={setQuery} />
 
         {/* body */}
         <div className="listpost__body">

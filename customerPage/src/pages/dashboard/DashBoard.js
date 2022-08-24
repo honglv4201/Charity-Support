@@ -187,13 +187,13 @@ export const DashBoard = (props) => {
 
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
-    if (window.innerWidth < 1500) {
+    if (window.innerWidth < 1400) {
       setIsMobile(true);
     }
   }, []);
   useEffect(() => {
     const handleWindowSizeChange = () => {
-      if (window.innerWidth < 1500) {
+      if (window.innerWidth < 1400) {
         setIsMobile(true);
       } else {
         setIsMobile(false);

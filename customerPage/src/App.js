@@ -32,6 +32,9 @@ import { Profile } from "./pages/auth/Profile";
 import { ProfilePassword } from "./pages/auth/ProfilePassword";
 import { ProfileDonate } from "./pages/auth/ProfileDonate";
 import { ProfileVolunteer } from "./pages/auth/ProfileVolunteer";
+import DashBoardRoute from "./pages/dashboard/DashBoardRoute";
+import { NoSupport } from "./pages/homePage/NoSupport";
+import AnalysicRoute from "./pages/analysic/AnalysicRoute";
 
 function App() {
   return (
@@ -56,11 +59,6 @@ function App() {
           path="/register-orginization"
           element={<RegisterOrgnizationPage />}
         />
-        <Route path="/faq" element={<FaqPage />} />
-        <Route path="/analysic" element={<AnaLysicItem />} />
-        <Route path="/user" element={<AnalysicUser />} />
-        <Route path="/statement" element={<AnalysicStatement />} />
-        <Route path="/achievement" element={<AnalysicResult />} />
 
         {/* post page */}
         <Route path="/createpost" element={<CreatePostPage />} />
@@ -75,7 +73,9 @@ function App() {
         <Route path="/post" element={<PostPage />} />
 
         {/* dash board */}
-        <Route path="/dashboard" element={<DashBoard />} />
+
+        <Route path="/dashboard/*" element={<DashBoardRoute />}></Route>
+        {/* <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/dashboard/donator" element={<DashBoardUser />} />
         <Route
           path="/dashboard/chuongtrinh"
@@ -90,7 +90,8 @@ function App() {
         <Route
           path="/dashboard/checkuser"
           element={<DashBoardVolunteerAdmin />}
-        />
+        /> */}
+        <Route path="*" element={<AnalysicRoute />}></Route>
       </Routes>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../../components/header/Header";
 import "./homepage.css";
@@ -83,7 +83,7 @@ export const HomePage = (props) => {
                 <p className="desc">
                   Chúng tôi sẽ "trao tận tay" tấm lòng nhân ái của bạn
                 </p>
-                <Link to="/list" className="btn-donate zoom-anim">
+                <Link to="/listpost/all" className="btn-donate zoom-anim">
                   Ủng hộ ngay
                   <i class="fas fa-caret-right"></i>
                 </Link>

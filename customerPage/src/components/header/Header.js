@@ -149,24 +149,38 @@ export const Header = (props) => {
                 className="modal-expand__content"
                 onClick={(e) => e.stopPropagation()}
               >
-                <Link
-                  to="/login"
-                  onClick={() => {
-                    localStorage.setItem("loginto", "home");
-                  }}
-                  className="btn-auth login"
-                >
-                  Đăng nhập
-                </Link>
-                <Link
-                  to="signup"
-                  onClick={() => {
-                    localStorage.setItem("loginto", "home");
-                  }}
-                  className="btn-auth signup"
-                >
-                  Đăng ký
-                </Link>
+                {localStorage.getItem("mykey") !== "2" ? (
+                  <>
+                    <Link
+                      to="/login"
+                      onClick={() => {
+                        localStorage.setItem("loginto", "home");
+                      }}
+                      className="btn-auth login"
+                    >
+                      Đăng nhập
+                    </Link>
+                    <Link
+                      to="signup"
+                      onClick={() => {
+                        localStorage.setItem("loginto", "home");
+                      }}
+                      className="btn-auth signup"
+                    >
+                      Đăng ký
+                    </Link>
+                  </>
+                ) : (
+                  <Link
+                    to="/login"
+                    onClick={() => {
+                      localStorage.removeItem("mykey");
+                    }}
+                    className="btn-auth login"
+                  >
+                    Đăng xuất
+                  </Link>
+                )}
 
                 <ul className="list-nav">
                   <li className={pathname === "/" ? "active" : ""}>

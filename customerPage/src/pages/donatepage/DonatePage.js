@@ -183,9 +183,15 @@ export const DonatePage = (props) => {
 
             {/* submit */}
 
-            <Link to="/paying" className="custom-btn pay-btn">
-              Thanh Toán
-            </Link>
+            {window.innerWidth > 800 ? (
+              <Link to="/paying" className="custom-btn pay-btn">
+                Thanh Toán
+              </Link>
+            ) : (
+              <Link to="/paying-complete" className="custom-btn pay-btn">
+                Thanh Toán
+              </Link>
+            )}
           </div>
         </div>
       </div>
