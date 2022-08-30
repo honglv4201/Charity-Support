@@ -25,7 +25,7 @@ Charity Support is a website that helps users easily donate for charity program 
 - Dashboard
 - Manager charity program, organization, voluteer
 - Analysic revenue, system status,...
-- Settings, regulations
+- Create program, manage volunteer,...
 
 # Tech stack
 
