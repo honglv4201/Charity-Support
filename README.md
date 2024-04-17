@@ -37,4 +37,4 @@ Charity Support is a website that helps users easily donate for charity program 
 
 # Contact
 
-Contact me at this email: lamvanhongvn@gmail.com. Thank you!!
+Contact me at this email: 19520094@gm.uit.edu.vn. Thank you!!
